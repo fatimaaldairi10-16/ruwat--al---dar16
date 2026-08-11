@@ -1,0 +1,757 @@
+html {
+    scroll-behavior: smooth;
+}
+/* --- التصفير الإفتراضي للأنماط --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Amiri', 'Tajawal', serif;
+    background-color: #EFE9DD; /* خلفية كريمية تراثية */
+    color: #382B22;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* --- الهيدر والقائمة العلوية --- */
+.navbar {
+    padding: 25px 80px;
+    background-color: transparent;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #382B22;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #382B22;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a.active, nav a:hover {
+    border-bottom: 2px solid #382B22;
+    padding-bottom: 4px;
+}
+
+/* --- قسم الهيرو الرئيسي (الباب والنافذة) --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+}
+
+.hero-frame {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #F5F2EB;
+    border-radius: 16px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.hero-window-img,
+.hero-door-img {
+    width: 280px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.hero-text-box {
+    text-align: center;
+    max-width: 500px;
+    padding: 20px;
+    z-index: 2;
+}
+
+.brand-title {
+    font-family: 'Amiri', serif;
+    font-size: 72px;
+    color: #382B22;
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.hero-quote {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2C221B;
+    margin-bottom: 12px;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    color: #6E5D4F;
+    margin-bottom: 20px;
+}
+
+.decorative-line {
+    color: #B2977D;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn-start {
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #382B22;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-start:hover {
+    background-color: #544134;
+}
+
+/* --- الأقسام العامة --- */
+.section-container {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #382B22;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* قسم عن المبادرة */
+.about-media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.media-card {
+    background: #F5F2EB;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.media-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #382B22;
+}
+
+.cover-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.video-container video {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.about-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    background-color: #F8F4EC;
+    border: 2px dashed #C8BCAC;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.info-card h3 {
+    font-size: 24px;
+    color: #382B22;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    font-size: 18px;
+    color: #4A3E35;
+}
+
+.info-cards-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* الكروت (الحكايات والرواة) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card, .narrator-card {
+    background-color: #F8F4EC;
+    border: 2px dashed #C8BCAC;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+.card-media {
+    height: 160px;
+    background-color: #E8DFC8;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.play-icon {
+    font-size: 36px;
+    color: #382B22;
+}
+
+.card-info h3, .narrator-card h3 {
+    font-size: 22px;
+    color: #382B22;
+    margin-bottom: 8px;
+}
+
+.card-sub, .narrator-job {
+    font-size: 16px;
+    color: #7A6B5D;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #E8DFC8;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+}
+
+.narrator-location {
+    font-size: 16px;
+    color: #A47B53;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* قسم اعطنا رأيك والـ QR */
+.feedback-card {
+    background-color: #F8F4EC;
+    border: 2px solid #C8BCAC;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.feedback-quote {
+    font-size: 20px;
+    font-weight: bold;
+    color: #382B22;
+    margin-bottom: 25px;
+    line-height: 1.8;
+}
+
+.qr-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.qr-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    border: 2px solid #382B22;
+}
+
+.qr-box p {
+    font-size: 16px;
+    color: #6E5D4F;
+}
+
+/* الفوتر */
+.main-footer {
+    background-color: #1F1915;
+    color: #C8BCAC;
+    padding: 40px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.footer-logo {
+    font-size: 24px;
+    color: #FFF;
+    margin-bottom: 8px;
+    font-family: 'Amiri', serif;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #8C7F72;
+}
+.hero-cover-img {
+    width: 220px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+/* تنسيق عنوان الفيديو */
+.video-title {
+    font-size: 22px;          /* حجم متوسط وليس كبيراً جداً */
+    font-weight: 700;         /* خط عريض */
+    color: #382B22;           /* اللون البني الداكن المعتمد في الموقع */
+    margin-bottom: 15px;      /* مسافة تحت الكلمة وقبل الفيديو */
+    text-align: center;       /* محاذاة في المنتصف */
+}
+/* =========================================================
+   تنسيقات قسم "عن المبادرة" المحدثة
+   ========================================================= */
+
+/* 1. عنوان "عن المبادرة" الرئيسي (عرض أكبر، خط بارز ومميز) */
+#about .section-title {
+    font-family: 'Amiri', serif;
+    font-size: 52px;            /* خط ضخم ومميز */
+    font-weight: 700;
+    color: #382B22;
+    text-align: center;
+    margin-bottom: 45px;
+    letter-spacing: 2px;
+    position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 40px;
+}
+
+/* خط ديكوري تحت عنوان "عن المبادرة" لإبراز العرض */
+#about .section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, #382B22, transparent);
+    margin: 10px auto 0 auto;
+}
+
+/* 2. حاوية المقطع التعريفي (توسيط في المنتصف) */
+.about-video-container {
+    max-width: 850px;
+    margin: 0 auto 60px auto;   /* توسيط في منتصف الصفحة ومسافة تحتها */
+    text-align: center;         /* توسيط المحتوى */
+}
+
+/* عنوان "المقطع التعريفي" (خط أكبر ومسافة أكبر قبل الفيديو) */
+.video-title {
+    font-family: 'Amiri', serif;
+    font-size: 32px;            /* تكبير خط العنوان */
+    font-weight: 700;
+    color: #382B22;
+    margin-bottom: 25px;        /* زيادة المسافة بين الكلمة والمقطع */
+    text-align: center;
+}
+
+/* مشغل الفيديو نفسه (موسع ومسط وسلس) */
+.about-video-container video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;             /* توسيط الفيديو بالكامل */
+    border-radius: 16px;
+    border: 3px solid #C8BCAC;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    background-color: #000;
+}
+
+/* 3. حاوية كروت (الرؤية، الرسالة، فكرة المبادرة) */
+.about-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 950px;           /* عرض أكبر */
+    margin: 0 auto;             /* توسيط الكروت */
+}
+
+.about-card {
+    background-color: #F8F5EE;
+    border-radius: 14px;
+    padding: 32px 40px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+}
+
+/* عناوين الكروت (الرؤية - الرسالة - فكرة المبادرة) خط بارز وضخم */
+.about-card-title {
+    font-family: 'Amiri', serif;
+    font-size: 38px;            /* خط ضخم وأكبر بكثير من النص السفليه */
+    font-weight: 700;
+    margin-bottom: 15px;        /* مسافة ممتازة تحت العنوان */
+    line-height: 1.2;
+}
+
+/* النص المكتوب تحت العناوين */
+.about-card-text {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 19px;            /* حجم يتناسب مع العناوين الكبيرة */
+    line-height: 1.9;
+    color: #3E342B;
+    font-weight: 400;
+}
+
+/* --- الألوان المخصصة لكل كارت --- */
+
+/* الرؤية - باللون الزيتي */
+.card-vision {
+    border-right: 8px solid #3E5242;
+}
+.card-vision .about-card-title {
+    color: #3E5242;
+}
+
+/* الرسالة - باللون الماروني */
+.card-mission {
+    border-right: 8px solid #6B2329;
+}
+.card-mission .about-card-title {
+    color: #6B2329;
+}
+
+/* فكرة المبادرة - باللون الأسود الداكن */
+.card-idea {
+    border-right: 8px solid #1A1614;
+}
+.card-idea .about-card-title {
+    color: #1A1614;
+}
+/* --- تنسيقات قسم الحكايات المحدثة --- */
+.story-title {
+    font-family: 'Amiri', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #382B22;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.video-card .card-media {
+    height: auto;
+    background-color: transparent;
+    padding: 0;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #C8BCAC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #000;
+    display: block;
+}
+/* --- إصلاح تداخل الفيديوهات وترتيب شبكة الحكايات --- */
+
+/* 1. ضبط شبكة الكروت لتكون فوق بعض أو بمسافات ممتازة */
+#tales .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* 2. احتواء الكارت للفيديو بداخلها ومنع الخروج */
+.video-card {
+    width: 100%;
+    overflow: hidden; /* يمنع خروج الفيديو خارج الكارت */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3. حاوية الفيديو داخل الكارت */
+.video-card .card-media {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+/* 4. إجبار الفيديو على الالتزام بعرض الكارت 100% فقط */
+.video-card video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #C8BCAC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #000;
+}
+/* =========================================================
+   تنسيقات قسم الرواة المحدثة والفخمة
+   ========================================================= */
+
+.narrators-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.narrator-card {
+    background-color: #FAF6F0;
+    border: 2px solid #D5C8B8;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-align: center;
+    width: 320px; /* عرض ثابت وأنيق للبطاقة */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.narrator-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    border-color: #8C5A32;
+}
+
+/* حاوية الصورة الدائرية مع إطارين تراثيين */
+.narrator-avatar-box {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 22px auto;
+    border-radius: 50%;
+    border: 4px solid #382B22;   /* الإطار الخارجي الداكن */
+    padding: 5px;                /* مسافة بين الإطارين */
+    background-color: #EFE9DD;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* الصورة الشخصية */
+.narrator-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+/* اسم الراوية */
+.narrator-name {
+    font-family: 'Amiri', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #382B22;
+    margin-bottom: 10px;
+}
+
+/* وظيفة الراوية */
+.narrator-job {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px;
+    color: #5C4E43;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    min-height: 42px; /* توحيد ارتفاع صندوق الوصف بين البطاقات */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* موقع / منطقة الراوية */
+.narrator-location {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #8C5A32; /* لون عنابي/بني دافئ */
+    background-color: #EFE8DC;
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+/* =========================================================
+   تنسيقات قسم الختام واستبيان الرضا (QR Feedback)
+   ========================================================= */
+
+.feedback-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.feedback-card {
+    background: linear-gradient(135deg, #FAF6F0 0%, #EFE8DC 100%);
+    border: 2px solid #C8BCAC;
+    border-radius: 20px;
+    padding: 45px 30px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* المقولة الشعرية/التراثية */
+.feedback-quote {
+    font-family: 'Amiri', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #6B2329; /* لون عنابي/ماروني فاخر */
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* نص الدعوة للمشاركة */
+.feedback-text {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+    color: #382B22;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* حاوية الـ QR Code */
+.qr-container {
+    display: inline-block;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 16px;
+    border: 2px solid #D5C8B8;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.qr-image {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px auto;
+}
+
+.qr-hint {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 14px;
+    color: #7A6A5C;
+    font-weight: 500;
+}
+/* =========================================================
+   تنسيق بطاقة التوقيع والحقوق (تصميم أنيق ومستقل)
+   ========================================================= */
+
+.signature-card {
+    max-width: 650px;
+    margin: 50px auto 40px auto; /* مسافة علوية وسفلية للفصل التام */
+    padding: 10px;
+    background: #FAF6F0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(56, 43, 34, 0.1); /* ظل دافئ وبارز */
+    border: 1px solid #E2D7C7;
+}
+
+/* الإطار الداخلي المزخرف */
+.signature-border {
+    border: 2px dashed #8C5A32; /* إطار مائل للتراث باللون البرونزي */
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #F8F3EA;
+}
+
+/* نجمة الزخرفة */
+.decorative-star {
+    color: #8C5A32;
+    font-size: 18px;
+    display: block;
+    margin: 5px 0;
+}
+
+/* النص التعريفي */
+.credits-text {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px;
+    color: #6E5D4F;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+/* اسم الطالبة (خط عريض ولون ماروني فخم) */
+.student-name {
+    font-family: 'Amiri', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #6B2329; /* لون عنابي/ماروني راقٍ */
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+/* خط فاصل صغير */
+.divider-line {
+    width: 80px;
+    height: 2px;
+    background: #4A5D4E; /* لون زيتي */
+    margin: 12px auto;
+    border-radius: 2px;
+}
+
+/* اسم المدرسة (لون زيتي تراثي) */
+.school-name {
+    font-family: 'Amiri', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #4A5D4E;
+    margin-top: 8px;
+}
