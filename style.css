@@ -755,3 +755,54 @@ nav a.active, nav a:hover {
     color: #4A5D4E;
     margin-top: 8px;
 }
+/* ==========================================
+   تنسيقات الشاشات الصغيرة والهواتف
+   ========================================== */
+@media (max-width: 768px) {
+    
+    /* 1. ضبط صور وفيديوهات الموقع ككل */
+    img, video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 2. ترتيب القائمة العلوية */
+    .nav-container {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* 3. ترتيب قسم الهيرو (Hero Section) فوق بعضه */
+    .hero-frame {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .hero-cover-img, 
+    .hero-door-img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+    }
+
+    .hero-text-box {
+        width: 100%;
+    }
+
+    /* 4. ضبط شبكة البطاقات لظهور بطاقة واحدة في كل سطر */
+    .cards-grid,
+    .about-cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
