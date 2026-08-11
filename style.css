@@ -806,3 +806,21 @@ nav a.active, nav a:hover {
         gap: 20px;
     }
 }
+/* تعديل القائمة العلوية للهاتف لتكون في سطر واحد */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        display: flex;
+        flex-direction: row; /* عرض أفقي */
+        justify-content: center;
+        align-items: center;
+        gap: 8px; /* تقليل المسافات بين الكلمات */
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar nav a {
+        font-size: 13px; /* تصغير الخط قليلاً لتتسع الشاشة للكلمات الأربع */
+        white-space: nowrap; /* منع الكلمة من الانقسام أو النزول لسطر جديد */
+    }
+}
