@@ -14,7 +14,7 @@
 
     <!-- 1. شريط الملاحة (Header) -->
     <header class="navbar">
-        <div class="container nav-container">
+        <div class="nav-container">
             <div class="logo">
                 <h2>رُواةُ الدَّار</h2>
             </div>
@@ -32,9 +32,10 @@
     <!-- قسم الهيرو الرئيسي -->
     <section class="hero-section">
         <div class="hero-frame">
-            <!-- صورة غلاف المبادرة -->
+            <!-- صورة الغلاف -->
             <img src="Images/cover.jpeg" alt="غلاف المبادرة" class="hero-cover-img">
-            <!-- المحتوى والنص في المنتصف -->
+            
+            <!-- النص في المنتصف -->
             <div class="hero-text-box">
                 <h1 class="brand-title">رُواةُ الدَّار</h1>
                 <p class="hero-quote">«كان يا ما كان في البحرين»</p>
@@ -42,149 +43,141 @@
                 <div class="decorative-line">✦ ━━━━ ✦</div>
                 <a href="#tales" class="btn-start">ابدأ الحكاية ✦</a>
             </div>
-            <!-- صورة الباب على اليسار -->
+
+            <!-- صورة الباب -->
             <img src="Images/door.jpeg" alt="باب تراثي" class="hero-door-img">
         </div>
     </section>
-<!-- 2. قسم عن المبادرة (About Section) -->
-<section id="about" class="section-container">
-    <h2 class="section-title">عن المبادرة</h2>
-    
-    <!-- الفيديو التعريفي -->
-    <div class="about-video-container">
-        <h3 class="video-title">المقطع التعريفي</h3>
-        <video controls width="100%" playsinline>
-  <source src="Video/video.mp4" type="video/mp4">
-  متصفحك لا يدعم تشغيل الفيديو.
-</video>
-    </div>
 
-    <!-- شبكة الرؤية والرسالة وفكرة المبادرة -->
-    <div class="about-cards-container">
+    <!-- 2. قسم عن المبادرة (About Section) -->
+    <section id="about" class="section-container">
+        <h2 class="section-title">عن المبادرة</h2>
         
-        <!-- كارت الرؤية (اللون الزيتي) -->
-        <div class="about-card card-vision">
-            <h3 class="about-card-title">الرؤية</h3>
-            <p class="about-card-text">
-                أن لا تنطفئ الحكاياتُ برحيلِ رُواتها، بل تبقى إرثًا حيًّا يسكن القلوب، تتناقله الأجيالُ كما تتوارثُ النخيلُ ثمرَها، لتظلَّ «رُواةُ الدار» حارسةً لذاكرة الوطن، وصوتًا لماضٍ يستحق أن يُروى.
-            </p>
+        <!-- الفيديو التعريفي -->
+        <div class="about-video-container">
+            <h3 class="video-title">المقطع التعريفي</h3>
+            <video controls playsinline preload="metadata">
+                <source src="video.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
         </div>
 
-        <!-- كارت الرسالة (اللون الماروني) -->
-        <div class="about-card card-mission">
-            <h3 class="about-card-title">الرسالة</h3>
-            <p class="about-card-text">
-                نؤمن بأن لكلِّ حكايةٍ روحًا تستحقُّ الخلود، ولكلِّ راوٍ أثرًا لا ينبغي أن يُنسى، لذا نسعى إلى جمع روايات كبار السن، وحفظها، ونقلها بأمانةٍ إلى الأجيال، لتظلَّ ذاكرة الوطن نابضةً بالحياة.
-            </p>
-        </div>
+        <!-- شبكة الرؤية والرسالة وفكرة المبادرة -->
+        <div class="about-cards-container">
+            <div class="about-card card-vision">
+                <h3 class="about-card-title">الرؤية</h3>
+                <p class="about-card-text">
+                    أن لا تنطفئ الحكاياتُ برحيلِ رُواتها، بل تبقى إرثًا حيًّا يسكن القلوب، تتناقله الأجيالُ كما تتوارثُ النخيلُ ثمرَها، لتظلَّ «رُواةُ الدار» حارسةً لذاكرة الوطن، وصوتًا لماضٍ يستحق أن يُروى.
+                </p>
+            </div>
 
-        <!-- كارت فكرة المبادرة (اللون الأسود الداكن) -->
-        <div class="about-card card-idea">
-            <h3 class="about-card-title">فكرة المبادرة</h3>
-            <p class="about-card-text">
-                قامت مبادرة «رُواةُ الدار» على إحياء ذاكرة الوطن عبر توثيق الحكايات الشفهية لكبار السن، حيث جُمعت رواياتهم وسُجِّلت، ثم أُعيدت صياغتها بلغةٍ قريبة من جيل الشباب دون المساس بروحها الأصيلة. ولم تقتصر المبادرة على التوثيق، بل امتد أثرها إلى تحويل تلك الحكايات إلى حلقاتٍ مرئية ومحتوى رقمي، مع أرشفتها في مكتبةٍ رقمية تحفظها من الاندثار، لتظل ذاكرة الوطن حيّةً ومتداولة بين الأجيال.
-            </p>
-        </div>
+            <div class="about-card card-mission">
+                <h3 class="about-card-title">الرسالة</h3>
+                <p class="about-card-text">
+                    نؤمن بأن لكلِّ حكايةٍ روحًا تستحقُّ الخلود، ولكلِّ راوٍ أثرًا لا ينبغي أن يُنسى، لذا نسعى إلى جمع روايات كبار السن، وحفظها، ونقلها بأمانةٍ إلى الأجيال، لتظلَّ ذاكرة الوطن نابضةً بالحياة.
+                </p>
+            </div>
 
-    </div>
+            <div class="about-card card-idea">
+                <h3 class="about-card-title">فكرة المبادرة</h3>
+                <p class="about-card-text">
+                    قامت مبادرة «رُواةُ الدار» على إحياء ذاكرة الوطن عبر توثيق الحكايات الشفهية لكبار السن، حيث جُمعت رواياتهم وسُجِّلت، ثم أُعيدت صياغتها بلغةٍ قريبة من جيل الشباب دون المساس بروحها الأصيلة.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- 3. قسم الحكايات (Tales Section) -->
-<section id="tales" class="section-container">
-    <h2 class="section-title">الحكايات</h2>
-    <!-- القصة الأولى -->
-<div class="card video-card">
-    <h3 class="story-title">وَ كانَتِ البَناتُ أُنساً</h3>
-    <div class="card-media">
-        <video controls width="100%" playsinline preload="metadata">
-            <source src="story1.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    </div>
-</div>
-
-<!-- القصة الثانية -->
-<div class="card video-card">
-    <h3 class="story-title">زائِرٌ مِنَ الغَيب</h3>
-    <div class="card-media">
-        <video controls width="100%" playsinline preload="metadata">
-            <source src="story2.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    </div>
-</div>
-
-<!-- القصة الثالثة -->
-<div class="card video-card">
-    <h3 class="story-title">حِكايَةٌ عَن سُرور</h3>
-    <div class="card-media">
-        <video controls width="100%" playsinline preload="metadata">
-            <source src="story3.mp4" type="video/mp4">
-            متصفحك لا يدعم تشغيل الفيديو.
-        </video>
-    </div>
-</div>
-    <div class="cards-grid">
-    </div>
-</section>
-<!-- 4. قسم الرواة (Narrators Section) -->
-<section id="narrators" class="section-container">
-    <h2 class="section-title">رواة الدار</h2>
-    
-    <div class="cards-grid narrators-grid">
+    <section id="tales" class="section-container">
+        <h2 class="section-title">الحكايات</h2>
         
-        <!-- الراوية الأولى -->
-        <div class="card narrator-card">
-            <div class="narrator-avatar-box">
-                <img src="Images/fatima.jpeg" alt="أ.فاطمة راشد العشار" class="narrator-img">
+        <div class="cards-grid">
+            <div class="card video-card">
+                <h3 class="story-title">وَ كانَتِ البَناتُ أُنساً</h3>
+                <div class="card-media">
+                    <video controls playsinline preload="metadata">
+                        <source src="story1.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
             </div>
-            <h3 class="narrator-name">أ.فاطمة راشد العشار</h3>
-            <p class="narrator-job">مشرفة شؤون إدارية و مالية متقاعدة</p>
-            <p class="narrator-location">📍 المحرق</p>
-        </div>
 
-        <!-- الراوية الثانية -->
-        <div class="card narrator-card">
-            <div class="narrator-avatar-box">
-                <img src="Images/fawzia.jpeg" alt="فوزية ( أم ثامر )" class="narrator-img">
+            <div class="card video-card">
+                <h3 class="story-title">زائِرٌ مِنَ الغَيب</h3>
+                <div class="card-media">
+                    <video controls playsinline preload="metadata">
+                        <source src="story2.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
             </div>
-            <h3 class="narrator-name">فوزية ( أم ثامر )</h3>
-            <p class="narrator-job">راوية للتراث الشفهي</p>
-            <p class="narrator-location">📍 قلالي</p>
-        </div>
 
-    </div>
-</section>
-<!-- 5. قسم الختام والاستبيان (Feedback Section) -->
-<section id="feedback" class="section-container feedback-section">
-    <div class="feedback-card">
-        <h2 class="feedback-quote">
-            «كُلُّ حِكايَةٍ تُروى تَترُكُ أثَرًا، وَكُلُّ رَأيٍ صادِقٍ يَصنَعُ أثَرًا آخَر»
-        </h2>
+            <div class="card video-card">
+                <h3 class="story-title">حِكايَةٌ عَن سُرور</h3>
+                <div class="card-media">
+                    <video controls playsinline preload="metadata">
+                        <source src="story3.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. قسم الرواة (Narrators Section) -->
+    <section id="narrators" class="section-container">
+        <h2 class="section-title">رواة الدار</h2>
         
-        <p class="feedback-text">
-            شاركونا انطباعكم عن <strong>«رُواةُ الدار»</strong>، ولتكن كلمتكم جزءًا من حكايتنا.
-        </p>
+        <div class="cards-grid narrators-grid">
+            <div class="card narrator-card">
+                <div class="narrator-avatar-box">
+                    <img src="Images/fatima.jpeg" alt="أ.فاطمة راشد العشار" class="narrator-img">
+                </div>
+                <h3 class="narrator-name">أ.فاطمة راشد العشار</h3>
+                <p class="narrator-job">مشرفة شؤون إدارية و مالية متقاعدة</p>
+                <p class="narrator-location">📍 المحرق</p>
+            </div>
 
-        <!-- رمز الاستجابة السريعة QR Code -->
-        <div class="qr-container">
-            <img src="Images/qr-code.png" alt="رمز قياس الرضا QR Code" class="qr-image">
-            <p class="qr-hint">امسح الرمز عبر كاميرا هاتفك للمشاركة</p>
+            <div class="card narrator-card">
+                <div class="narrator-avatar-box">
+                    <img src="Images/fawzia.jpeg" alt="فوزية ( أم ثامر )" class="narrator-img">
+                </div>
+                <h3 class="narrator-name">فوزية ( أم ثامر )</h3>
+                <p class="narrator-job">راوية للتراث الشفهي</p>
+                <p class="narrator-location">📍 قلالي</p>
+            </div>
         </div>
-</div>
-</section>
-<!-- بطاقة توقيع المشروع (مستقلة وبارزة) -->
-<div class="signature-card">
-    <div class="signature-border">
-        <span class="decorative-star">✦</span>
-        <p class="credits-text">
-            تم إنجاز هذا المشروع بجهد الطالبة
-        </p>
-        <h3 class="student-name">فاطمة علي حسن الديري</h3>
-        <div class="divider-line"></div>
-        <p class="school-name">مدرسة الاستقلال الثانوية للبنات</p>
-        <span class="decorative-star">✦</span>
+    </section>
+
+    <!-- 5. قسم الختام والاستبيان (Feedback Section) -->
+    <section id="feedback" class="section-container feedback-section">
+        <div class="feedback-card">
+            <h2 class="feedback-quote">
+                «كُلُّ حِكايَةٍ تُروى تَترُكُ أثَرًا، وَكُلُّ رَأيٍ صادِقٍ يَصنَعُ أثَرًا آخَر»
+            </h2>
+            <p class="feedback-text">
+                شاركونا انطباعكم عن <strong>«رُواةُ الدار»</strong>، ولتكن كلمتكم جزءًا من حكايتنا.
+            </p>
+            <div class="qr-container">
+                <img src="Images/qr-code.png" alt="رمز قياس الرضا QR Code" class="qr-image">
+                <p class="qr-hint">امسح الرمز عبر كاميرا هاتفك للمشاركة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- بطاقة توقيع المشروع -->
+    <div class="signature-card">
+        <div class="signature-border">
+            <span class="decorative-star">✦</span>
+            <p class="credits-text">تم إنجاز هذا المشروع بجهد الطالبة</p>
+            <h3 class="student-name">فاطمة علي حسن الديري</h3>
+            <div class="divider-line"></div>
+            <p class="school-name">مدرسة الاستقلال الثانوية للبنات</p>
+            <span class="decorative-star">✦</span>
+        </div>
     </div>
-</div>
-    <!-- 6. الفوتر السفي (Footer) -->
+
+    <!-- 6. الفوتر السفلي (Footer) -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="social-links">
