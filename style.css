@@ -824,3 +824,32 @@ nav a.active, nav a:hover {
         white-space: nowrap; /* منع الكلمة من الانقسام أو النزول لسطر جديد */
     }
 }
+
+.team-credits {
+    margin-top: 15px;
+    padding-top: 10px;
+}
+
+.team-title {
+    font-size: 1rem;
+    color: #8b5a2b; /* أو اللون الذهبي/البني المعتمد في تصميمك */
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.team-group {
+    margin-bottom: 8px;
+}
+
+.team-role {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.team-member {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
