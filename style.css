@@ -833,8 +833,18 @@ nav a.active, nav a:hover {
     padding: 0 20px;
 }
 
+/* البطاقة الرئيسية وتوسيطها في الصفحة */
+.signature-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
 .signature-border {
-    border: 1px solid #dcd3c1; /* إطار ناعم وأنيق بدل المنقط الحاد */
+    border: 1px solid #dcd3c1; /* إطار ناعم وأنيق */
     border-radius: 16px;
     padding: 35px 30px;
     background-color: #fdfbf7; /* لون ورقي دافئ ومريح */
@@ -842,6 +852,7 @@ nav a.active, nav a:hover {
     max-width: 550px;
     width: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-sizing: border-radius;
 }
 
 /* الأقسام والتسميات */
@@ -871,6 +882,16 @@ nav a.active, nav a:hover {
     font-size: 0.85rem;
     color: #666;
     margin-top: 2px;
+} /* <-- تم إغلاق القوس هنا لإصلاح المشكلة */
+
+/* فاصل ناعم ومحدد في المنتصف */
+.subtle-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #dcd3c1, transparent);
+    margin: 20px auto; /* كلمة auto لتوسيط الخط في المنتصف تماماً */
+    width: 60%;
+    display: block;
+}
 
 /* قائمة فريق العمل */
 .team-list {
