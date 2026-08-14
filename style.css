@@ -967,3 +967,16 @@ nav a.active, nav a:hover {
     display: block;
     border-radius: 8px;
 }
+
+/* إصلاح التباعد وتداخل بطاقات الحكايات */
+#tales .cards-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 35px !important; /* مسافة ممتازة بين كل فيديو وآخر */
+    justify-content: center !important;
+}
+
+#tales .video-card {
+    margin-bottom: 20px !important; /* مسافة إضافية تحت كل بطاقة */
+    clear: both !important;
+}
