@@ -936,3 +936,34 @@ nav a.active, nav a:hover {
 .divider-line {
     display: none !important;
 }
+/* --- إصلاح تداخل شبكة الحكايات والرواة --- */
+
+/* ضبط الشبكة لتعرض بطاقتين في السطر عند وجود 4 عناصر */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    align-items: stretch; /* يضمن أن جميع البطاقات بنفس الارتفاع */
+}
+
+/* التأكد من أن بطاقة الفيديو لا تخرج عن حدودها */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden; /* يمنع خروج الفيديو أو النص خارج البطاقة */
+}
+
+/* ضبط حجم مشغل الفيديو داخل البطاقة */
+.card-media {
+    width: 100%;
+    margin-top: auto;
+}
+
+.card-media video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
