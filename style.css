@@ -871,15 +871,6 @@ nav a.active, nav a:hover {
     font-size: 0.85rem;
     color: #666;
     margin-top: 2px;
-}
-
-/* فاصل خطي بسبط وناعم جداً */
-.subtle-divider {
-    height: 1px;
-    background: linear-gradient(to right, transparent, #dcd3c1, transparent);
-    margin: 25px auto;
-    width: 70%;
-}
 
 /* قائمة فريق العمل */
 .team-list {
