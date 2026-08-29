@@ -12,40 +12,30 @@
 </head>
 <body>
 
-    <!-- 1. شريط الملاحة (Header) -->
+    <!-- 1. شريط الملاحة (Header) - نظيف ومرتب -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- اليمين: عنوان الموقع -->
+            <div class="header-brand">
+                <h1 class="brand-name">رُوَاةُ الدَّار</h1>
+            </div>
 
-        <!-- الشعار في المنتصف -->
-        <div class="logo-center">
-            <img src="School-logo.jpeg" alt="شعار المدرسة والوزارة" class="school-logo-img">
-        </div><header class="site-header">
-    <div class="header-container">
-        <!-- اليمين: عنوان الموقع -->
-        <div class="header-brand">
-            <h1 class="brand-name">رُوَاةُ الدَّار</h1>
+            <!-- المنتصف: الشعار بحجم مناسب وضبط دقيق -->
+            <div class="header-logo">
+                <img src="School-logo.jpeg" alt="شعار المدرسة والوزارة" class="school-logo">
+            </div>
+
+            <!-- اليسار: روابط التصفح -->
+            <nav class="header-nav">
+                <a href="#about">عن المبادرة</a>
+                <a href="#tales">الحكايات</a>
+                <a href="#narrators">الرواة</a>
+                <a href="#feedback">اعطنا رأيك</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- المنتصف: الشعار بحجم مناسب وضبط دقيق -->
-        <div class="header-logo">
-            <img src="School-logo.jpeg" alt="شعار المدرسة والوزارة" class="school-logo">
-        </div>
-
-        <!-- اليسار: روابط التصفح أفقية مرتبة -->
-        <nav class="header-nav">
-            <a href="#about">عن المبادرة</a>
-            <a href="#stories">الحكايات</a>
-            <a href="#narrators">الرواة</a>
-            <a href="#feedback">اعطنا رأيك</a>
-        </nav>
-    </div>
-</header>
-
-        <!-- اسم الموقع -->
-        <div class="brand-title">
-            <h1>رُوَاةُ الدَّار</h1>
-        </div>
-    </div>
-</header>
-    <!-- قسم الهيرو الرئيسي -->
+    <!-- 2. قسم الهيرو الرئيسي -->
     <section class="hero-section">
         <div class="hero-frame">
             <!-- صورة الغلاف -->
@@ -65,7 +55,7 @@
         </div>
     </section>
 
-    <!-- 2. قسم عن المبادرة (About Section) -->
+    <!-- 3. قسم عن المبادرة (About Section) -->
     <section id="about" class="section-container">
         <h2 class="section-title">عن المبادرة</h2>
         
@@ -103,7 +93,7 @@
         </div>
     </section>
 
-    <!-- 3. قسم الحكايات (Tales Section) -->
+    <!-- 4. قسم الحكايات (Tales Section) -->
     <section id="tales" class="section-container">
         <h2 class="section-title">الحكايات</h2>
         
@@ -138,7 +128,7 @@
                 </div>  
             </div>
 
-            <!-- الحكاية الرابعة للراوي أ.عبدالله علي المطوع -->
+            <!-- الحكاية الرابعة -->
             <div class="card video-card">
                 <h3 class="story-title">حينَ كان للخوفِ حكاية</h3>
                 <div class="card-media">
@@ -151,7 +141,7 @@
         </div>
     </section>
 
-    <!-- 4. قسم الرواة (Narrators Section) -->
+    <!-- 5. قسم الرواة (Narrators Section) -->
     <section id="narrators" class="section-container">
         <h2 class="section-title">رواة الدار</h2>
         
@@ -174,7 +164,6 @@
                 <p class="narrator-location">📍 قلالي</p>
             </div>
 
-            <!-- بطاقة الراوي الجديد أ.عبدالله علي المطوع -->
             <div class="card narrator-card">
                 <div class="narrator-avatar-box">
                     <img src="ali.jpeg" alt="أ.عبدالله علي المطوع" class="narrator-img">
@@ -186,7 +175,7 @@
         </div>
     </section>
 
-    <!-- 5. قسم الختام والاستبيان (Feedback Section) -->
+    <!-- 6. قسم الختام والاستبيان (Feedback Section) -->
     <section id="feedback" class="section-container feedback-section">
         <div class="feedback-card">
             <h2 class="feedback-quote">
@@ -205,7 +194,6 @@
     <!-- بطاقة توقيع المشروع -->
     <div class="signature-card">
         <div class="signature-border">
-            
             <span class="decorative-star">✦</span>
 
             <!-- قسم إعداد الطالبة -->
@@ -233,11 +221,10 @@
             </div>
 
             <span class="decorative-star">✦</span>
-
         </div>
     </div>
 
-    <!-- 6. الفوتر السفلي (Footer) -->
+    <!-- 7. الفوتر السفلي (Footer) -->
     <footer class="main-footer">
         <div class="footer-content">
             <div class="social-links">
