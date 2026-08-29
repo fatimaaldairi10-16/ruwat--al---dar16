@@ -2461,3 +2461,51 @@ footer.main-footer {
     max-width: 1200px !important;
     margin: 0 auto !important;
 }
+/* ==========================================
+   إصلاح انسيابية الفوتر والشريط السفلي
+   ========================================== */
+html, body {
+    overflow-x: hidden; /* منع ظهور شريط التمرير الأفقي */
+}
+
+footer.main-footer {
+    background-color: #1F1915 !important;
+    color: #C8BCAC !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+    margin-top: 60px !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.main-footer .footer-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+/* تنسيق روابط التواصل لتظهر بشكل أنيق */
+.social-links {
+    display: flex !important;
+    gap: 15px !important;
+    margin-bottom: 5px !important;
+}
+
+.social-links a {
+    color: #C8BCAC !important;
+    text-decoration: none !important;
+    font-size: 1.1rem !important;
+    transition: color 0.3s ease !important;
+}
+
+.social-links a:hover {
+    color: #FFFFFF !important;
+}
