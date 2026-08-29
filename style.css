@@ -1309,3 +1309,34 @@ body {
     object-fit: cover !important;
     border-radius: 12px;
 }
+/* 1. تكبير وتوسيع شريط الشعارات ليملأ المساحة المتاحة كمستطيل واضح */
+.logos-container,
+.school-logo,
+.header-logos {
+    max-width: 100% !important;
+    height: 80px !important; /* ارتفاع متناسق يملأ الهيدر */
+    padding: 4px 15px !important;
+    border-radius: 8px !important; /* شكل مستطيل بحواف ناعمة */
+    background-color: #ffffff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.logos-container img,
+.school-logo img,
+.header-logos img {
+    height: 100% !important;
+    width: auto !important;
+    max-height: 72px !important;
+    object-fit: contain !important;
+}
+
+/* 2. تكبير خط روابط التصفح (أعطنا رأيك، الرواة، الحكايات...) قليلاً */
+.nav-links a,
+.navbar-nav .nav-link,
+.site-header a {
+    font-size: 1.15rem !important; /* تكبير متناسق وبسيط */
+    font-weight: 600 !important;   /* إبراز الخط بشكل ألمع */
+    padding: 6px 12px !important;
+}
