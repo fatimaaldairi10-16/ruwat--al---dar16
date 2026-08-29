@@ -1075,3 +1075,82 @@ nav a, .nav-links a, .menu a {
 nav a:hover, .nav-links a:hover {
     color: #8C5A32 !important;
 }
+/* ==========================================
+   إعادة حاوية الهيدر البيضاء الكاملة
+   ========================================== */
+
+/* 1. الكرت الأبيض الرئيسي للهيدر (مثل الكرت السفلي تماماً) */
+header, .header-card, .navbar {
+    background-color: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 15px 40px !important;
+    margin: 20px auto 30px auto !important;
+    width: 90% !important;
+    max-width: 1100px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+    box-sizing: border-box !important;
+    border: none !important;
+}
+
+/* 2. عنوان "رُواةُ الدَّار" على اليمين */
+header h1, header h2, .site-title, .logo {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* 3. الشعار في المنتصف (بدون أي كرت أو إطار داخلي إضافي) */
+.school-logo, 
+.school-logo-container, 
+.logo-center,
+div:has(> img[src*="school"]) {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.school-logo img, 
+.school-logo-container img, 
+.logo-center img, 
+header img {
+    height: 50px !important;
+    width: auto !important;
+    max-width: 320px !important;
+    object-fit: contain !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* 4. الروابط على اليسار متراصة وأنيقة */
+nav ul, .nav-links, .menu {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+nav a, .nav-links a, .menu a {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+nav a:hover, .nav-links a:hover {
+    color: #8C5A32 !important;
+}
