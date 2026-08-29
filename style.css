@@ -668,3 +668,19 @@ https://fatimaaldairi10-16.github.io/ruwat--al---dar16/
         margin: 0 auto !important;
     }
 }
+/* Container for the menu items */
+.nav-links {
+    display: flex;
+    flex-wrap: nowrap;          /* يمنع العناصر من النزول لسطر جديد */
+    justify-content: space-between; /* توزيع العناصر بالتساوي على العرض */
+    align-items: center;
+    width: 100%;
+    gap: 5px;                  /* تقليل المسافة بين الكلمات */
+}
+
+/* Individual menu link style */
+.nav-links a {
+    white-space: nowrap;        /* يمنع الكلمة الواحدة من الانقسام */
+    font-size: 13px;            /* تصغير حجم الخط ليلائم عرض شاشة الجوال */
+    padding: 4px 2px;
+}
