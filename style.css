@@ -1006,27 +1006,21 @@ nav a.active, nav a:hover {
     border-color: var(--primary-color);   /* تغيير لون الإطار للعنابي عند التفاعل */
 }
 /* ==========================================
-   تنسيق شعار المدرسة العريض (في الهيدر)
+   تنسيق شعار المدرسة (في الهيدر)
    ========================================== */
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
 
 .school-logo {
-    height: 42px;                   /* ارتفاع مناسب جداً لشريط الملاحة */
-    width: auto;                    /* يحافظ على أبعاد الشعار الأصلي بدون تشويه */
-    object-fit: contain;            /* يضمن ظهور الشعار كاملاً */
-    background-color: #ffffff;      /* خلفية بيضاء نقية لإبراز الشعار */
-    padding: 4px 10px;              /* مساحة داخلية حول الشعار */
-    border-radius: 8px;             /* زوايا منحنية بنعومة */
+    height: 40px;                   /* ارتفاع مناسب ومرتب في شريط الملاحة */
+    width: auto;                    /* يحافظ على أبعاد الشعار الأصلية */
+    object-fit: contain;
+    background-color: #ffffff;      /* خلفية بيضاء تبرز تفاصيل الشعار */
+    padding: 3px 8px;
+    border-radius: 8px;
     border: 1px solid rgba(212, 175, 55, 0.4); /* إطار ذهبي رقيق */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06); /* ظل خفيف وأنيق */
-    transition: var(--transition);
-}
-
-.school-logo:hover {
-    transform: translateY(-2px);    /* ارتفاع ناعم للأعلى عند التمرير بالماوس */
-    border-color: var(--primary-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
