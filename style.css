@@ -32,42 +32,61 @@ body {
 }
 
 /* ==========================================================================
-   2. شريط الملاحة والهيدر (Header & Nav)
+   2. شريط الملاحة والهيدر (Header & Nav - الشعار واسع وأنيق)
    ========================================================================== */
-.site-header {
-  background-color: rgba(239, 233, 221, 0.95);
-  backdrop-filter: blur(8px);
+header.site-header {
+  background-color: #FAF7F2;
+  border-bottom: 2px solid var(--accent-gold);
+  padding: 10px 5%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 2px solid var(--accent-gold);
-  padding: 15px 5%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
+  gap: 15px;
+}
+
+.header-brand {
+  flex: 1;
+  text-align: right;
 }
 
 .brand-name {
   font-family: 'Amiri', serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--text-main);
+  white-space: nowrap;
+}
+
+.header-logo {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .school-logo {
-  height: 50px;
-  width: 50px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid var(--accent-brown);
+  height: 80px;
+  max-height: 90px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .header-nav {
+  flex: 1.5;
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   gap: 20px;
 }
 
@@ -75,13 +94,13 @@ body {
   text-decoration: none;
   color: var(--text-main);
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 700;
+  white-space: nowrap;
   transition: all 0.3s ease;
 }
 
 .header-nav a:hover {
   color: var(--accent-brown);
-  border-bottom: 2px solid var(--accent-brown);
 }
 
 /* ==========================================================================
@@ -515,8 +534,8 @@ body {
     gap: 10px;
   }
 
-  .header-nav a {
-    font-size: 0.95rem;
+  .school-logo {
+    height: 65px;
   }
 
   .hero-frame {
@@ -537,89 +556,4 @@ body {
   .cards-grid {
     grid-template-columns: 1fr;
   }
-}
-/* ==========================================
-   تكبير الشعار بشكل ضخم وأنيق
-   ========================================== */
-
-/* 1. الكرت الأبيض الرئيسي (زيادة الهامش الداخلي ليتسع للشعار الكبير) */
-header.site-header {
-    background-color: #ffffff !important;
-    border-radius: 20px !important;
-    padding: 15px 40px !important;
-    margin: 20px auto 30px auto !important;
-    width: 90% !important;
-    max-width: 1250px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
-    box-sizing: border-box !important;
-}
-
-/* 2. الحاوية الداخلية */
-.site-header .header-container {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    width: 100% !important;
-    gap: 15px !important;
-}
-
-/* 3. اليمين: عنوان "رُواةُ الدَّار" */
-.site-header .header-brand {
-    flex: 1 !important;
-    text-align: right !important;
-}
-
-.site-header .brand-name {
-    font-family: 'Amiri', serif !important;
-    font-size: 2.3rem !important;
-    font-weight: 700 !important;
-    color: #382B22 !important;
-    margin: 0 !important;
-    white-space: nowrap !important;
-}
-
-/* 4. المنتصف: تكبير الشعار لأقصى درجة مساحة */
-.site-header .header-logo {
-    flex: 2.5 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.site-header img.school-logo {
-    height: 130px !important;       /* تكبير الارتفاع بشكل بارز جداً */
-    max-height: 130px !important;
-    width: auto !important;
-    max-width: 100% !important;
-    object-fit: contain !important;
-    border-radius: 0 !important;
-    border: none !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-}
-
-/* 5. اليسار: الروابط */
-.site-header .header-nav {
-    flex: 2 !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    gap: 25px !important;
-}
-
-.site-header .header-nav a {
-    font-family: 'Tajawal', sans-serif !important;
-    font-size: 1.15rem !important;
-    font-weight: 700 !important;
-    color: #382B22 !important;
-    text-decoration: none !important;
-    white-space: nowrap !important;
-    transition: color 0.3s ease !important;
-}
-
-.site-header .header-nav a:hover {
-    color: #8C5A32 !important;
 }
