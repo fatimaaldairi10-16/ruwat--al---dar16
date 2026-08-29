@@ -1340,3 +1340,38 @@ body {
     font-weight: 600 !important;   /* إبراز الخط بشكل ألمع */
     padding: 6px 12px !important;
 }
+/* 1. تكبير الإطار الأبيض ليصبح مستطيل واسع وواضح */
+.header-center-logo, 
+.school-logo-container,
+div:has(> img[src*="logo"]), 
+.logos-wrapper {
+    width: 380px !important;       /* توسيع العرض ليشمل المساحة */
+    height: 95px !important;       /* زيادة الارتفاع ليكون مستطيل بارز */
+    padding: 8px 16px !important;
+    background-color: #ffffff !important;
+    border: 2px solid #D1C7BD !important;
+    border-radius: 12px !important; /* زوايا مستطيلة ناعمة */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 2. تكبير صورة الشعارات داخل المستطيل لتملأ المساحة */
+.header-center-logo img, 
+.school-logo-container img,
+div:has(> img[src*="logo"]) img,
+.logos-wrapper img {
+    max-height: 80px !important;
+    width: 100% !important;
+    object-fit: contain !important;
+}
+
+/* 3. تكبير خط الروابط العلويّة (أعطنا رأيك، الرواة، إلخ) بشكل بسيط وأنيق */
+header nav a, 
+.nav-menu a, 
+.navbar a {
+    font-size: 1.25rem !important;  /* تكبير الخط */
+    font-weight: 700 !important;    /* جعل الخط أكثر وضوحاً */
+    margin: 0 8px !important;
+}
