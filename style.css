@@ -1006,93 +1006,70 @@ nav a.active, nav a:hover {
     border-color: var(--primary-color);   /* تغيير لون الإطار للعنابي عند التفاعل */
 }
 /* ==========================================
-   تنسيق الهيدر الفاخر (توسيط الشعار بدون إطار)
+   تعديل وتنسيق الهيدر النهائي المتقن
    ========================================== */
 
-/* 1. ضبط الحاوية الرئيسية للهيدر ومحاذاة الأطراف */
-.nav-container, 
-.header-container,
-header .container {
+/* 1. ضبط شريط الهيدر وتوزيع جهاته الثلاث بشكل صحيح */
+header, .site-header, nav {
     display: flex !important;
+    flex-direction: row-reverse !important; /* لضمان الترتيب من اليمين لليسامر */
     justify-content: space-between !important;
     align-items: center !important;
+    width: 100% !important;
     max-width: 1200px !important;
     margin: 0 auto !important;
-    padding: 15px 30px !important;
+    padding: 20px 40px !important;
+    box-sizing: border-box !important;
 }
 
-/* 2. إلغاء الإطارات والخلفيات البيضاء نهائياً عن الشعارات */
-.logo, 
-.header-logo, 
+/* 2. عنوان "رُواةُ الدَّار" - الجانب الأيمن */
+header h1, header h2, .logo, .site-title {
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    text-align: right !important;
+}
+
+/* 3. الشعار في المنتصف تماماً وبدون أي إطار */
+.school-logo, 
 .school-logo-container,
-.logos-container,
-div:has(> img) {
+div:has(> img[src*="school"]),
+header img {
+    margin: 0 auto !important;
     border: none !important;
     background: transparent !important;
-    background-color: transparent !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin: 0 !important;
 }
 
-/* 3. جعل الشعار في المنتصف تماماً وبحجم عريض وواضح */
-.logo-center,
-.header-logo,
-.school-logo {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex: 1 !important;
-}
-
-.school-logo img,
-.header-logo img,
-.logo-center img,
-header img {
-    height: 70px !important;          /* ارتفاع ممتاز لإبراز الشعارات */
-    max-height: 70px !important;
+header img, .school-logo img {
+    height: 65px !important;
     width: auto !important;
-    max-width: 380px !important;      /* عرض متناسق */
+    max-width: 350px !important;
     object-fit: contain !important;
     border: none !important;
     box-shadow: none !important;
-    background: none !important;
 }
 
-/* 4. تقريب عناصر القائمة على اليسار وتكبير الخط بعرض وأناقة */
-nav ul, 
-.nav-links, 
-.header-nav {
+/* 4. الروابط على الجانب الأيسر - مرتبة وقريبة من بعضها وبخط عريض */
+nav ul, .nav-links, .menu {
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
-    gap: 18px !important;             /* تقريب المسافات بين الروابط لتكون ألمع وأرتب */
+    gap: 20px !important;            /* مسافة متناسقة وقريبة بين الروابط */
     list-style: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-nav a, 
-.nav-links a, 
-.header-nav a {
-    font-family: 'Amiri', 'Tajawal', serif !important;
-    font-size: 1.35rem !important;    /* حجم خط واضح وكبير */
-    font-weight: 700 !important;      /* خط عريض وفخم */
+nav a, .nav-links a, .menu a {
+    font-size: 1.3rem !important;    /* خط واضح وعريض */
+    font-weight: 700 !important;
     color: #382B22 !important;
     text-decoration: none !important;
     white-space: nowrap !important;
-    transition: color 0.3s ease !important;
 }
 
-nav a:hover, 
-.nav-links a:hover, 
-.header-nav a:hover {
+nav a:hover, .nav-links a:hover {
     color: #8C5A32 !important;
-}
-
-/* 5. موازنة عنوان "رُواةُ الدَّار" على اليمين */
-.brand-title, 
-.logo h2, 
-.header-brand {
-    flex: 1 !important;
-    text-align: right !important;
 }
