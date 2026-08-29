@@ -1103,3 +1103,86 @@ nav a.active, nav a:hover {
     margin: 0;
     font-family: inherit;
 }
+/* ==========================================
+   تنسيق الهيدر الاحترافي والمضبوط
+   ========================================== */
+.site-header {
+    background-color: #f7f3ec;
+    border-bottom: 1px solid #e2d7c5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: table; /* يضمن ترتيب العناصر أفقيًا حتى مع المتصفحات القديمة */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* تقسيم العناصر لثلاثة أعمدة متوازنة */
+.header-brand, 
+.header-logo, 
+.header-nav {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* 1. اسم الموقع (اليمين) */
+.header-brand {
+    width: 25%;
+    text-align: right;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #4a3b32;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* 2. الشعار في المنتصف (حجم محدد ومرتب جداً) */
+.header-logo {
+    width: 50%;
+    text-align: center;
+}
+
+.school-logo {
+    height: 45px;                   /* ارتفاع دقيق يتناسب مع شريط الموقع */
+    max-width: 280px;               /* حد أقصى للعرض لمنع تمدد الصورة */
+    width: auto;
+    object-fit: contain;
+    background-color: #ffffff;      /* خلفية بيضاء تبرز تفاصيل الشعار */
+    padding: 4px 12px;
+    border-radius: 8px;
+    border: 1px solid #d4af37;      /* إطار ذهبي رقيق */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    display: inline-block;
+}
+
+/* 3. روابط التصفح (اليسار - بجانب بعضها أفصياً) */
+.header-nav {
+    width: 25%;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.header-nav a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #4a3b32;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #c8963e;
+}
