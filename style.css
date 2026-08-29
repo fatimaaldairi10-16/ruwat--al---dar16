@@ -1024,3 +1024,82 @@ nav a.active, nav a:hover {
     border: 1px solid rgba(212, 175, 55, 0.4); /* إطار ذهبي رقيق */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
+/* ==========================================
+   تنسيق الهيدر الشامل (مرتب وفي المنتصف)
+   ========================================== */
+.navbar {
+    background-color: rgba(245, 240, 230, 0.95);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* روابط التصفح */
+.nav-links {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a3b32;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c8963e;
+}
+
+/* الشعار في المنتصف بحجم واصل ومرتب */
+.logo-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.school-logo-img {
+    height: 58px;                     /* ارتفاع مرئي وواضح جداً */
+    width: auto;                      /* يحافظ على أبعاد الشعار */
+    max-width: 320px;                 /* يضمن اتساع التفاصيل كاملة */
+    object-fit: contain;
+    background-color: #ffffff;        /* خلفية بيضاء تبرز تفاصيل الشعار */
+    padding: 6px 16px;                /* مساحة داخلية مريحة */
+    border-radius: 10px;              /* حواف منحنية أنيقة */
+    border: 1px solid rgba(200, 150, 62, 0.4); /* إطار ذهبي راقٍ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);  /* ظل خفيف معاصر */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.school-logo-img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* عنوان الموقع في الجانب الآخر */
+.brand-title {
+    flex: 1;
+    text-align: left;
+}
+
+.brand-title h1 {
+    font-size: 1.8rem;
+    color: #3a2e2b;
+    margin: 0;
+    font-family: inherit;
+}
