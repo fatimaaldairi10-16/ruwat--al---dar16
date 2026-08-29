@@ -1006,437 +1006,71 @@ nav a.active, nav a:hover {
     border-color: var(--primary-color);   /* تغيير لون الإطار للعنابي عند التفاعل */
 }
 /* ==========================================
-   تنسيق شعار المدرسة (في الهيدر)
+   تنسيق الهيدر الموحد: مستطيل الشعارات والروابط
    ========================================== */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
 
-.school-logo {
-    height: 40px;                   /* ارتفاع مناسب ومرتب في شريط الملاحة */
-    width: auto;                    /* يحافظ على أبعاد الشعار الأصلية */
-    object-fit: contain;
-    background-color: #ffffff;      /* خلفية بيضاء تبرز تفاصيل الشعار */
-    padding: 3px 8px;
-    border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.4); /* إطار ذهبي رقيق */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-/* ==========================================
-   تنسيق الهيدر الشامل (مرتب وفي المنتصف)
-   ========================================== */
-.navbar {
-    background-color: rgba(245, 240, 230, 0.95);
-    backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 12px 0;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
-}
-
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* روابط التصفح */
-.nav-links {
-    display: flex;
-    gap: 20px;
-    flex: 1;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #4a3b32;
-    font-weight: 600;
-    font-size: 1.05rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #c8963e;
-}
-
-/* الشعار في المنتصف بحجم واصل ومرتب */
-.logo-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.school-logo-img {
-    height: 58px;                     /* ارتفاع مرئي وواضح جداً */
-    width: auto;                      /* يحافظ على أبعاد الشعار */
-    max-width: 320px;                 /* يضمن اتساع التفاصيل كاملة */
-    object-fit: contain;
-    background-color: #ffffff;        /* خلفية بيضاء تبرز تفاصيل الشعار */
-    padding: 6px 16px;                /* مساحة داخلية مريحة */
-    border-radius: 10px;              /* حواف منحنية أنيقة */
-    border: 1px solid rgba(200, 150, 62, 0.4); /* إطار ذهبي راقٍ */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);  /* ظل خفيف معاصر */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.school-logo-img:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-}
-
-/* عنوان الموقع في الجانب الآخر */
-.brand-title {
-    flex: 1;
-    text-align: left;
-}
-
-.brand-title h1 {
-    font-size: 1.8rem;
-    color: #3a2e2b;
-    margin: 0;
-    font-family: inherit;
-}
-/* ==========================================
-   تنسيق الهيدر الاحترافي والمضبوط
-   ========================================== */
-.site-header {
-    background-color: #f7f3ec;
-    border-bottom: 1px solid #e2d7c5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 0;
-    width: 100%;
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: table; /* يضمن ترتيب العناصر أفقيًا حتى مع المتصفحات القديمة */
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* تقسيم العناصر لثلاثة أعمدة متوازنة */
-.header-brand, 
-.header-logo, 
-.header-nav {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-/* 1. اسم الموقع (اليمين) */
-.header-brand {
-    width: 25%;
-    text-align: right;
-}
-
-.brand-name {
-    margin: 0;
-    font-size: 1.8rem;
-    color: #4a3b32;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-/* 2. الشعار في المنتصف (حجم محدد ومرتب جداً) */
-.header-logo {
-    width: 50%;
-    text-align: center;
-}
-
-.school-logo {
-    height: 45px;                   /* ارتفاع دقيق يتناسب مع شريط الموقع */
-    max-width: 280px;               /* حد أقصى للعرض لمنع تمدد الصورة */
-    width: auto;
-    object-fit: contain;
-    background-color: #ffffff;      /* خلفية بيضاء تبرز تفاصيل الشعار */
-    padding: 4px 12px;
-    border-radius: 8px;
-    border: 1px solid #d4af37;      /* إطار ذهبي رقيق */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-    display: inline-block;
-}
-
-/* 3. روابط التصفح (اليسار - بجانب بعضها أفصياً) */
-.header-nav {
-    width: 25%;
-    text-align: left;
-    white-space: nowrap;
-}
-
-.header-nav a {
-    display: inline-block;
-    margin-right: 15px;
-    color: #4a3b32;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.header-nav a:hover {
-    color: #c8963e;
-}
-
-/* ==========================================
-   تنسيق شريط الهيدر الشامل والمنسق
-   ========================================== */
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* لمنع أي نصوص من الخروج خارج حدود الصفحة */
-}
-
-.site-header {
-    background-color: #f7f3ec;
-    border-bottom: 1px solid #e2d7c5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 10px 0;
-    width: 100%;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.header-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* 1. اسم الموقع (اليمين) */
-.header-brand .brand-name {
-    margin: 0;
-    font-size: 1.6rem;
-    color: #4a3b32;
-    font-weight: bold;
-    font-family: 'Amiri', serif;
-}
-
-/* 2. الشعار في المنتصف */
-.header-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.school-logo {
-    height: 45px;
-    width: auto;
-    max-width: 250px;
-    object-fit: contain;
-    background-color: #ffffff;
-    padding: 4px 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.4);
-}
-
-/* 3. روابط القائمة (اليسار) */
-.header-nav {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.header-nav a {
-    color: #4a3b32;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
-}
-
-.header-nav a:hover {
-    color: #c8963e;
-}
-/* 1. تكبير شريط الشعارات في الأعلى (Navbar Logos) */
-.logos-container img, 
-.school-logo,
-.header-logos img {
-    height: 58px !important; /* زيادة الارتفاع بدلاً من الحجم الصغير الحالي */
-    width: auto !important;
-    object-fit: contain;
-}
-
-/* 2. تحسين أبعاد كارت الهيرو الرئيسي (رواة الدار) */
-.hero-card, 
-.hero-section .container {
-    max-width: 1150px !important;
-    padding: 30px 40px !important;
-}
-
-/* 3. توحيد وتكبير ارتفاع صورتي الباب والغلاف الجانبيتين */
-.hero-left-img, 
-.hero-right-img,
-.hero-img {
-    height: 340px !important; /* ارتفاع متناسق ومريح مع النص والزر */
-    object-fit: cover !important;
-    border-radius: 12px;
-}
-/* 1. تكبير شريط الشعارات في الأعلى (Navbar Logos) */
-.logos-container img, 
-.school-logo,
-.header-logos img {
-    height: 58px !important; /* زيادة الارتفاع بدلاً من الحجم الصغير الحالي */
-    width: auto !important;
-    object-fit: contain;
-}
-
-/* 2. تحسين أبعاد كارت الهيرو الرئيسي (رواة الدار) */
-.hero-card, 
-.hero-section .container {
-    max-width: 1150px !important;
-    padding: 30px 40px !important;
-}
-
-/* 3. توحيد وتكبير ارتفاع صورتي الباب والغلاف الجانبيتين */
-.hero-left-img, 
-.hero-right-img,
-.hero-img {
-    height: 340px !important; /* ارتفاع متناسق ومريح مع النص والزر */
-    object-fit: cover !important;
-    border-radius: 12px;
-}
-/* 1. تكبير وتوسيع شريط الشعارات ليملأ المساحة المتاحة كمستطيل واضح */
-.logos-container,
-.school-logo,
-.header-logos {
-    max-width: 100% !important;
-    height: 80px !important; /* ارتفاع متناسق يملأ الهيدر */
-    padding: 4px 15px !important;
-    border-radius: 8px !important; /* شكل مستطيل بحواف ناعمة */
-    background-color: #ffffff !important;
+/* 1. جعل الهيدر أفقيًا وموزعًا بشكل منظم */
+.navbar, .site-header, header {
     display: flex !important;
+    justify-content: space-between !important;
     align-items: center !important;
-    justify-content: center !important;
+    padding: 15px 50px !important;
+    background-color: #EFE9DD !important;
 }
 
-.logos-container img,
-.school-logo img,
-.header-logos img {
-    height: 100% !important;
-    width: auto !important;
-    max-height: 72px !important;
-    object-fit: contain !important;
-}
-
-/* 2. تكبير خط روابط التصفح (أعطنا رأيك، الرواة، الحكايات...) قليلاً */
-.nav-links a,
-.navbar-nav .nav-link,
-.site-header a {
-    font-size: 1.15rem !important; /* تكبير متناسق وبسيط */
-    font-weight: 600 !important;   /* إبراز الخط بشكل ألمع */
-    padding: 6px 12px !important;
-}
-/* 1. تكبير الإطار الأبيض ليصبح مستطيل واسع وواضح */
-.header-center-logo, 
-.school-logo-container,
-div:has(> img[src*="logo"]), 
-.logos-wrapper {
-    width: 380px !important;       /* توسيع العرض ليشمل المساحة */
-    height: 95px !important;       /* زيادة الارتفاع ليكون مستطيل بارز */
-    padding: 8px 16px !important;
-    background-color: #ffffff !important;
-    border: 2px solid #D1C7BD !important;
-    border-radius: 12px !important; /* زوايا مستطيلة ناعمة */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08) !important;
-}
-
-/* 2. تكبير صورة الشعارات داخل المستطيل لتملأ المساحة */
-.header-center-logo img, 
-.school-logo-container img,
-div:has(> img[src*="logo"]) img,
-.logos-wrapper img {
-    max-height: 80px !important;
-    width: 100% !important;
-    object-fit: contain !important;
-}
-
-/* 3. تكبير خط الروابط العلويّة (أعطنا رأيك، الرواة، إلخ) بشكل بسيط وأنيق */
-header nav a, 
-.nav-menu a, 
-.navbar a {
-    font-size: 1.25rem !important;  /* تكبير الخط */
-    font-weight: 700 !important;    /* جعل الخط أكثر وضوحاً */
-    margin: 0 8px !important;
-}
-/* 1. تكبير الحاوية الرئيسية للشعارات لتصبح مستطيل عريض وبارز */
-header .logos-container,
-.header-center-logo,
-.school-logo-container,
-header div:has(img) {
-    width: 480px !important;            /* عرض واسع ومستطيل يغطي المساحة العلويّة */
-    height: 110px !important;           /* ارتفاع مضاعَف لإبراز التفاصيل */
-    padding: 10px 20px !important;
-    background-color: #ffffff !important;
-    border: 2px solid #C8BCAC !important;
-    border-radius: 14px !important;     /* زوايا مستطيلة أنيقة */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* 2. تكبير صورة الشعارات بالكامل داخل المستطيل */
-header .logos-container img,
-.header-center-logo img,
-.school-logo-container img {
-    width: 100% !important;
-    height: 100% !important;
-    max-height: 95px !important;        /* أقصى ارتفاع متاح */
-    object-fit: contain !important;
-}
-
-/* 3. تكبير خط الروابط العلويّة (أعطنا رأيك، الرواة، الحكايات، إلخ) */
-header nav a,
-.navbar-nav a,
-.nav-link {
-    font-size: 1.35rem !important;      /* خط واضح وعريض */
-    font-weight: 700 !important;
-    color: #382B22 !important;
-    padding: 8px 14px !important;
-}
-/* 1. تكبير خط الروابط الجانبية (عن المبادرة، الحكايات، إلخ) */
-header ul li a,
-header nav a,
-.nav-link {
-    font-size: 1.5rem !important;      /* حجم خط واضح وكبير */
-    font-weight: 700 !important;
-    color: #382B22 !important;
-    padding: 0 15px !important;
-}
-
-/* 2. إلغاء الإطار الداخلي والتكبير المباشر لمستطيل الشعارات */
-div[class*="logo"],
-header div:has(img) {
-    border: none !important;           /* إزالة الإطار المزدوج */
+/* 2. إلغاء أي إطارات عشوائية من الحاويات الشفافة */
+.logo, .header-logo, .header-brand {
+    border: none !important;
     background: transparent !important;
     padding: 0 !important;
     box-shadow: none !important;
-    width: auto !important;
 }
 
-/* 3. تكبير الصورة نفسها لتشغل المساحة بالكامل */
-div[class*="logo"] img,
-header img[src*="logo"],
-header img {
-    height: 110px !important;         /* تكبير الارتفاع ليصبح مستطيل عريض وبارز */
-    max-height: 110px !important;
+/* 3. إنشاء مستطيل الشعارات الأبيض (المستطيل الرئيسي فقط) */
+.logo-center,
+.school-logo-container,
+.logos-wrapper {
+    background-color: #ffffff !important;
+    border: 1.5px solid #C8BCAC !important;
+    border-radius: 10px !important;
+    padding: 6px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 4. تكبير صورة الشعارات داخل المستطيل لتملأه بالكامل */
+.school-logo,
+.school-logo-img,
+.logo-center img,
+.school-logo-container img {
+    height: 75px !important;         /* تكبير الارتفاع ليصبح واضحًا جداً */
+    max-height: 75px !important;
     width: auto !important;
+    max-width: 360px !important;     /* عرض مستطيل ممتاز */
     object-fit: contain !important;
+    border: none !important;          /* إلغاء الإطار الداخلي لصورة الشعار */
+    padding: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* 5. تكبير خط روابط التصفح الجانبية (اعطنا رأيك، الرواة، الحكايات، عن المبادرة) */
+nav ul, .nav-links, .header-nav {
+    display: flex !important;
+    gap: 30px !important;
+    list-style: none !important;
+}
+
+nav a, .nav-links a, .header-nav a {
+    font-size: 1.4rem !important;     /* خط كبير، واضح، ومناسب جداً */
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+nav a:hover, .nav-links a:hover {
+    color: #8C5A32 !important;
 }
