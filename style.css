@@ -1006,71 +1006,93 @@ nav a.active, nav a:hover {
     border-color: var(--primary-color);   /* تغيير لون الإطار للعنابي عند التفاعل */
 }
 /* ==========================================
-   تنسيق الهيدر الموحد: مستطيل الشعارات والروابط
+   تنسيق الهيدر الفاخر (توسيط الشعار بدون إطار)
    ========================================== */
 
-/* 1. جعل الهيدر أفقيًا وموزعًا بشكل منظم */
-.navbar, .site-header, header {
+/* 1. ضبط الحاوية الرئيسية للهيدر ومحاذاة الأطراف */
+.nav-container, 
+.header-container,
+header .container {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    padding: 15px 50px !important;
-    background-color: #EFE9DD !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 15px 30px !important;
 }
 
-/* 2. إلغاء أي إطارات عشوائية من الحاويات الشفافة */
-.logo, .header-logo, .header-brand {
+/* 2. إلغاء الإطارات والخلفيات البيضاء نهائياً عن الشعارات */
+.logo, 
+.header-logo, 
+.school-logo-container,
+.logos-container,
+div:has(> img) {
     border: none !important;
     background: transparent !important;
-    padding: 0 !important;
+    background-color: transparent !important;
     box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-/* 3. إنشاء مستطيل الشعارات الأبيض (المستطيل الرئيسي فقط) */
+/* 3. جعل الشعار في المنتصف تماماً وبحجم عريض وواضح */
 .logo-center,
-.school-logo-container,
-.logos-wrapper {
-    background-color: #ffffff !important;
-    border: 1.5px solid #C8BCAC !important;
-    border-radius: 10px !important;
-    padding: 6px 20px !important;
+.header-logo,
+.school-logo {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 1 !important;
+}
+
+.school-logo img,
+.header-logo img,
+.logo-center img,
+header img {
+    height: 70px !important;          /* ارتفاع ممتاز لإبراز الشعارات */
+    max-height: 70px !important;
+    width: auto !important;
+    max-width: 380px !important;      /* عرض متناسق */
+    object-fit: contain !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* 4. تقريب عناصر القائمة على اليسار وتكبير الخط بعرض وأناقة */
+nav ul, 
+.nav-links, 
+.header-nav {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05) !important;
-}
-
-/* 4. تكبير صورة الشعارات داخل المستطيل لتملأه بالكامل */
-.school-logo,
-.school-logo-img,
-.logo-center img,
-.school-logo-container img {
-    height: 75px !important;         /* تكبير الارتفاع ليصبح واضحًا جداً */
-    max-height: 75px !important;
-    width: auto !important;
-    max-width: 360px !important;     /* عرض مستطيل ممتاز */
-    object-fit: contain !important;
-    border: none !important;          /* إلغاء الإطار الداخلي لصورة الشعار */
-    padding: 0 !important;
-    background: none !important;
-    box-shadow: none !important;
-}
-
-/* 5. تكبير خط روابط التصفح الجانبية (اعطنا رأيك، الرواة، الحكايات، عن المبادرة) */
-nav ul, .nav-links, .header-nav {
-    display: flex !important;
-    gap: 30px !important;
+    gap: 18px !important;             /* تقريب المسافات بين الروابط لتكون ألمع وأرتب */
     list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-nav a, .nav-links a, .header-nav a {
-    font-size: 1.4rem !important;     /* خط كبير، واضح، ومناسب جداً */
-    font-weight: 700 !important;
+nav a, 
+.nav-links a, 
+.header-nav a {
+    font-family: 'Amiri', 'Tajawal', serif !important;
+    font-size: 1.35rem !important;    /* حجم خط واضح وكبير */
+    font-weight: 700 !important;      /* خط عريض وفخم */
     color: #382B22 !important;
     text-decoration: none !important;
     white-space: nowrap !important;
+    transition: color 0.3s ease !important;
 }
 
-nav a:hover, .nav-links a:hover {
+nav a:hover, 
+.nav-links a:hover, 
+.header-nav a:hover {
     color: #8C5A32 !important;
+}
+
+/* 5. موازنة عنوان "رُواةُ الدَّار" على اليمين */
+.brand-title, 
+.logo h2, 
+.header-brand {
+    flex: 1 !important;
+    text-align: right !important;
 }
