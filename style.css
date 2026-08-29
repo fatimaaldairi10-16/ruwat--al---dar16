@@ -1375,3 +1375,39 @@ header nav a,
     font-weight: 700 !important;    /* جعل الخط أكثر وضوحاً */
     margin: 0 8px !important;
 }
+/* 1. تكبير الحاوية الرئيسية للشعارات لتصبح مستطيل عريض وبارز */
+header .logos-container,
+.header-center-logo,
+.school-logo-container,
+header div:has(img) {
+    width: 480px !important;            /* عرض واسع ومستطيل يغطي المساحة العلويّة */
+    height: 110px !important;           /* ارتفاع مضاعَف لإبراز التفاصيل */
+    padding: 10px 20px !important;
+    background-color: #ffffff !important;
+    border: 2px solid #C8BCAC !important;
+    border-radius: 14px !important;     /* زوايا مستطيلة أنيقة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 2. تكبير صورة الشعارات بالكامل داخل المستطيل */
+header .logos-container img,
+.header-center-logo img,
+.school-logo-container img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 95px !important;        /* أقصى ارتفاع متاح */
+    object-fit: contain !important;
+}
+
+/* 3. تكبير خط الروابط العلويّة (أعطنا رأيك، الرواة، الحكايات، إلخ) */
+header nav a,
+.navbar-nav a,
+.nav-link {
+    font-size: 1.35rem !important;      /* خط واضح وعريض */
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    padding: 8px 14px !important;
+}
