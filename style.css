@@ -1190,13 +1190,19 @@ nav a.active, nav a:hover {
 /* ==========================================
    تنسيق شريط الهيدر الشامل والمنسق
    ========================================== */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* لمنع أي نصوص من الخروج خارج حدود الصفحة */
+}
+
 .site-header {
     background-color: #f7f3ec;
     border-bottom: 1px solid #e2d7c5;
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 12px 0;
+    padding: 10px 0;
     width: 100%;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
@@ -1213,7 +1219,7 @@ nav a.active, nav a:hover {
 /* 1. اسم الموقع (اليمين) */
 .header-brand .brand-name {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #4a3b32;
     font-weight: bold;
     font-family: 'Amiri', serif;
@@ -1227,21 +1233,20 @@ nav a.active, nav a:hover {
 }
 
 .school-logo {
-    height: 48px;
+    height: 45px;
     width: auto;
-    max-width: 300px;
+    max-width: 250px;
     object-fit: contain;
     background-color: #ffffff;
-    padding: 4px 12px;
+    padding: 4px 10px;
     border-radius: 8px;
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    border: 1px solid rgba(212, 175, 55, 0.4);
 }
 
 /* 3. روابط القائمة (اليسار) */
 .header-nav {
     display: flex;
-    gap: 18px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -1249,7 +1254,7 @@ nav a.active, nav a:hover {
     color: #4a3b32;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
