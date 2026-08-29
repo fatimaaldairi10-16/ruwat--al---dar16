@@ -1261,3 +1261,27 @@ body {
 .header-nav a:hover {
     color: #c8963e;
 }
+/* 1. تكبير شريط الشعارات في الأعلى (Navbar Logos) */
+.logos-container img, 
+.school-logo,
+.header-logos img {
+    height: 58px !important; /* زيادة الارتفاع بدلاً من الحجم الصغير الحالي */
+    width: auto !important;
+    object-fit: contain;
+}
+
+/* 2. تحسين أبعاد كارت الهيرو الرئيسي (رواة الدار) */
+.hero-card, 
+.hero-section .container {
+    max-width: 1150px !important;
+    padding: 30px 40px !important;
+}
+
+/* 3. توحيد وتكبير ارتفاع صورتي الباب والغلاف الجانبيتين */
+.hero-left-img, 
+.hero-right-img,
+.hero-img {
+    height: 340px !important; /* ارتفاع متناسق ومريح مع النص والزر */
+    object-fit: cover !important;
+    border-radius: 12px;
+}
