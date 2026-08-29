@@ -2437,3 +2437,27 @@ header.site-header {
     color: #8C5A32 !important;
     font-size: 1.35rem !important;
 }
+/* ==========================================
+   جعل الفوتر الداكن يغطي كامل عرض الشاشة
+   ========================================== */
+footer.main-footer {
+    background-color: #1F1915 !important;
+    color: #C8BCAC !important;
+    padding: 40px 20px !important;
+    text-align: center !important;
+    margin-top: 60px !important;
+    
+    /* إلغاء أي تقييد للعرض ليمتد بعرض الصفحة بالكامل */
+    width: 100vw !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    box-sizing: border-box !important;
+}
+
+.main-footer .footer-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
