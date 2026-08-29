@@ -1154,3 +1154,83 @@ nav a, .nav-links a, .menu a {
 nav a:hover, .nav-links a:hover {
     color: #8C5A32 !important;
 }
+/* ==========================================
+   التنسيق النهائي المثالي للهيدر
+   ========================================== */
+
+/* 1. إجبار الهيدر على توزيع العناصر بالتساوي على طول الصفحة */
+header, .site-header, nav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 10px auto 30px auto !important;
+    padding: 10px 20px !important;
+    box-sizing: border-box !important;
+}
+
+/* 2. الجانب الأيمن: عنوان "رُواةُ الدَّار" كبير وواضح */
+header h1, header h2, .site-title, .brand-name {
+    flex: 1 !important;
+    text-align: right !important;
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: #382B22 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* 3. المنتصف تماماً: الشعار بالشكل البيضاوي الأبيض الممتاز وبحجم كبير */
+.school-logo, 
+.school-logo-container, 
+.logo-center,
+div:has(> img[src*="school"]) {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-color: #ffffff !important;
+    border: 1px solid #D1C7BD !important;
+    border-radius: 40px !important;          /* الشكل البيضاوي الأنيق */
+    padding: 6px 20px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.school-logo img, 
+.school-logo-container img, 
+.logo-center img, 
+header img {
+    height: 60px !important;                 /* حجم تكبير ممتاز وواضح */
+    max-height: 60px !important;
+    width: auto !important;
+    max-width: 360px !important;
+    object-fit: contain !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* 4. الجانب الأيسر: الروابط مصفوفة بخط كبير وعريض وقريبة من بعضها */
+nav ul, .nav-links, .menu {
+    flex: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 18px !important;                    /* مسافة قريبة ومرتبة */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+nav a, .nav-links a, .menu a {
+    font-size: 1.35rem !important;           /* خط كبير وعريض */
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+nav a:hover, .nav-links a:hover {
+    color: #8C5A32 !important;
+}
