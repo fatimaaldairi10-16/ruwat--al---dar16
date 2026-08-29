@@ -980,3 +980,28 @@ nav a.active, nav a:hover {
     margin-bottom: 20px !important; /* مسافة إضافية تحت كل بطاقة */
     clear: both !important;
 }
+/* ==========================================
+   تنسيق شعار المدرسة في شريط الملاحة
+   ========================================== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.school-logo {
+    height: 50px;                   /* ارتفاع مناسب للشعار */
+    width: 50px;                    /* عرض متناسق */
+    object-fit: cover;             /* احتواء الصورة بشكل ممتاز */
+    border-radius: 50%;             /* جعل الشعار دائرياً بشكل أنيق */
+    border: 2px solid var(--accent-color); /* إطار ذهبي رقيق */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف يعطي بعداً جمالياً */
+    padding: 2px;
+    background-color: #ffffff;      /* خلفية بيضاء خفيفة لإبراز تفاصيل الشعار */
+    transition: var(--transition);
+}
+
+.school-logo:hover {
+    transform: scale(1.08) rotate(-3deg); /* تأثير حركة ناعم عند مرور الماوس */
+    border-color: var(--primary-color);   /* تغيير لون الإطار للعنابي عند التفاعل */
+}
