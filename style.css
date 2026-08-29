@@ -2137,41 +2137,39 @@ nav a.active, nav a:hover {
     clear: both !important;
 }
 /* ==========================================
-   التوزيع النهائي الحاسم للهيدر (Grid System)
+   إصلاح الهيدر بناءً على كود HTML الفعلي
    ========================================== */
 
 /* 1. الكرت الأبيض الرئيسي */
-header.navbar, .navbar {
+header.site-header {
     background-color: #ffffff !important;
     border-radius: 20px !important;
-    padding: 15px 30px !important;
+    padding: 15px 35px !important;
     margin: 20px auto 30px auto !important;
     width: 90% !important;
     max-width: 1200px !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
     box-sizing: border-box !important;
-    display: block !important;
 }
 
-/* 2. تحويل الحاوية إلى شبكة بـ 3 أعمدة متساوية المساحة تماماً */
-.navbar .nav-container, 
-header nav, 
-header > div {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important; /* 3 أقسام متساوية */
+/* 2. الحاوية الداخلية: تقسيم الصف إلى 3 أجزاء متساوية (يمين - وسط - يسار) */
+.site-header .header-container {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
-    box-sizing: border-box !important;
+    gap: 20px !important;
 }
 
-/* 3. العمود الأول (اليمين): عنوان "رُواةُ الدَّار" */
-.navbar h1, 
-.navbar h2, 
-.navbar .logo-title,
-.navbar .logo h2 {
-    grid-column: 1 !important;
-    justify-self: start !important;
+/* 3. اليمين: عنوان "رُواةُ الدَّار" */
+.site-header .header-brand {
+    flex: 1 !important;
     text-align: right !important;
+}
+
+.site-header .brand-name {
+    font-family: 'Amiri', serif !important;
     font-size: 2.2rem !important;
     font-weight: 700 !important;
     color: #382B22 !important;
@@ -2179,46 +2177,47 @@ header > div {
     white-space: nowrap !important;
 }
 
-/* 4. العمود الثاني (المنتصف تماماً): الشعار بحجم ممتاز وواضح */
-.navbar .school-logo,
-.navbar .school-logo-container,
-.navbar img {
-    grid-column: 2 !important;
-    justify-self: center !important;
-    height: 60px !important;
-    max-height: 60px !important;
-    width: auto !important;
-    max-width: 320px !important;
-    object-fit: contain !important;
-    border: none !important;
-    background: transparent !important;
-    margin: 0 auto !important;
+/* 4. المنتصف تماماً: الشعار (تكبير الحجم وإلغاء شكل الدائرة) */
+.site-header .header-logo {
+    flex: 1.5 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
-/* 5. العمود الثالث (اليسار): الروابط مصفوفة على أقصى اليسار */
-.navbar nav, 
-.navbar ul, 
-.navbar .nav-links {
-    grid-column: 3 !important;
-    justify-self: end !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    gap: 20px !important;
-    list-style: none !important;
-    margin: 0 !important;
+.site-header img.school-logo {
+    height: 65px !important;         /* تكبير الارتفاع */
+    max-height: 65px !important;
+    width: auto !important;          /* إبقاء العرض التلقائي لإبراز الشعار */
+    max-width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 0 !important;     /* إلغاء الدائرة ليظهر الشعار كاملاً */
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
     padding: 0 !important;
 }
 
-.navbar nav a, 
-.navbar ul a {
-    font-size: 1.25rem !important;
+/* 5. اليسار: الروابط مصفوفة أفقياً بمسافات ممتازة */
+.site-header .header-nav {
+    flex: 1.5 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.site-header .header-nav a {
+    font-family: 'Tajawal', sans-serif !important;
+    font-size: 1.15rem !important;
     font-weight: 700 !important;
     color: #382B22 !important;
     text-decoration: none !important;
     white-space: nowrap !important;
+    transition: color 0.3s ease !important;
 }
 
-.navbar nav a:hover {
+.site-header .header-nav a:hover {
     color: #8C5A32 !important;
 }
