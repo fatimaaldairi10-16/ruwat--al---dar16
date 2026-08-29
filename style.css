@@ -2137,14 +2137,14 @@ nav a.active, nav a:hover {
     clear: both !important;
 }
 /* ==========================================
-   تكبير الشعار وتوسيع المسافات بين الروابط
+   تكبير الشعار بشكل ضخم وأنيق
    ========================================== */
 
-/* 1. الكرت الأبيض الرئيسي (زيادة المساحة الداخلية) */
+/* 1. الكرت الأبيض الرئيسي (زيادة الهامش الداخلي ليتسع للشعار الكبير) */
 header.site-header {
     background-color: #ffffff !important;
     border-radius: 20px !important;
-    padding: 20px 40px !important;
+    padding: 15px 40px !important;
     margin: 20px auto 30px auto !important;
     width: 90% !important;
     max-width: 1250px !important;
@@ -2177,17 +2177,17 @@ header.site-header {
     white-space: nowrap !important;
 }
 
-/* 4. المنتصف: تكبير الشعار بشكل واضح وممتاز */
+/* 4. المنتصف: تكبير الشعار لأقصى درجة مساحة */
 .site-header .header-logo {
-    flex: 2 !important; /* إعطاء مساحة أكبر للشعار */
+    flex: 2.5 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
 }
 
 .site-header img.school-logo {
-    height: 90px !important;        /* مضاعفة الارتفاع ليصبح كبيراً وواضحاً */
-    max-height: 90px !important;
+    height: 130px !important;       /* تكبير الارتفاع بشكل بارز جداً */
+    max-height: 130px !important;
     width: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
@@ -2198,14 +2198,14 @@ header.site-header {
     padding: 0 !important;
 }
 
-/* 5. اليسار: تباعد مريح وأنيق بين الروابط */
+/* 5. اليسار: الروابط */
 .site-header .header-nav {
     flex: 2 !important;
     display: flex !important;
     flex-direction: row !important;
     justify-content: flex-end !important;
     align-items: center !important;
-    gap: 25px !important; /* مسافة واسعة ومريحة بين الكلمات */
+    gap: 25px !important;
 }
 
 .site-header .header-nav a {
@@ -2214,7 +2214,7 @@ header.site-header {
     font-weight: 700 !important;
     color: #382B22 !important;
     text-decoration: none !important;
-    white-space: nowrap !important; /* يمنع نزول "اعطنا رأيك" لسطرين */
+    white-space: nowrap !important;
     transition: color 0.3s ease !important;
 }
 
