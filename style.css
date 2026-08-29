@@ -30,79 +30,109 @@ body {
   line-height: 1.8;
   overflow-x: hidden;
 }
+/* ==========================================
+   تنسيق الهيدر الأنيق والمتوازن
+   ========================================== */
 
-/* ==========================================================================
-   2. شريط الملاحة والهيدر (Header & Nav - الشعار واسع وأنيق)
-   ========================================================================== */
 header.site-header {
-  background-color: #FAF7F2;
-  border-bottom: 2px solid var(--accent-gold);
-  padding: 10px 5%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    background-color: #ffffff !important;
+    border-radius: 16px !important;
+    padding: 12px 30px !important;
+    margin: 20px auto 30px auto !important;
+    width: 92% !important;
+    max-width: 1200px !important;
+    box-shadow: 0 8px 25px rgba(56, 43, 34, 0.06) !important;
+    border: 1px solid #EFE8DC !important;
+    position: sticky !important;
+    top: 15px !important;
+    z-index: 1000 !important;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1250px;
-  margin: 0 auto;
-  gap: 15px;
+.site-header .header-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 20px !important;
 }
 
-.header-brand {
-  flex: 1;
-  text-align: right;
+/* 1. عنوان الموقع (يمين) */
+.site-header .header-brand {
+    flex: 1 !important;
+    text-align: right !important;
 }
 
-.brand-name {
-  font-family: 'Amiri', serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-main);
-  white-space: nowrap;
+.site-header .brand-name {
+    font-family: 'Amiri', serif !important;
+    font-size: 2.1rem !important;
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
 }
 
-.header-logo {
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* 2. الشعارات المتعددة (منتصف - بحجم متناسق وفاخر) */
+.site-header .header-logo {
+    flex: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
-.school-logo {
-  height: 80px;
-  max-height: 90px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
+.site-header img.school-logo {
+    height: 65px !important;          /* ارتفاع متناسق يمنع التمدد المفرط */
+    max-height: 70px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.03)) !important;
+    transition: transform 0.3s ease !important;
 }
 
-.header-nav {
-  flex: 1.5;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px;
+.site-header img.school-logo:hover {
+    transform: scale(1.02);
 }
 
-.header-nav a {
-  text-decoration: none;
-  color: var(--text-main);
-  font-size: 1.1rem;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: all 0.3s ease;
+/* 3. روابط التنقل (يسار) */
+.site-header .header-nav {
+    flex: 1.5 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 22px !important;
 }
 
-.header-nav a:hover {
-  color: var(--accent-brown);
+.site-header .header-nav a {
+    font-family: 'Tajawal', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    position: relative !important;
+    padding: 5px 0 !important;
+    transition: color 0.3s ease !important;
 }
 
+/* خط سفلِي تفاعلي عند التمرير على الروابط */
+.site-header .header-nav a::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 0% !important;
+    height: 2px !important;
+    background-color: #8C5A32 !important;
+    transition: width 0.3s ease !important;
+}
+
+.site-header .header-nav a:hover {
+    color: #8C5A32 !important;
+}
+
+.site-header .header-nav a:hover::after {
+    width: 100% !important;
+}
 /* ==========================================================================
    3. قسم الهيرو (Hero Section)
    ========================================================================== */
