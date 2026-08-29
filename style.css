@@ -2329,3 +2329,111 @@ header.site-header {
     padding: 3px 10px;
     border-radius: 20px;
 }
+/* ==========================================
+   تنسيق بطاقة التوقيع والإشراف (الترتيب النهائي)
+   ========================================== */
+.signature-card {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.signature-border {
+    border: 2px dashed #D4B69B;
+    border-radius: 15px;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.decorative-star {
+    color: #8C5A32;
+    font-size: 1.4rem;
+    display: block;
+    margin: 8px 0;
+}
+
+.credits-section {
+    margin-bottom: 15px;
+}
+
+.credits-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D4B69B, transparent);
+    margin: 20px auto;
+    width: 60%;
+}
+
+.section-label {
+    font-family: 'Tajawal', sans-serif;
+    color: #7A6A5D;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.person-name {
+    font-family: 'Amiri', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #382B22;
+    margin: 3px 0;
+}
+
+.school-name {
+    font-family: 'Tajawal', sans-serif;
+    color: #8C5A32;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.team-section {
+    padding-top: 5px;
+}
+
+.team-title {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #382B22;
+    margin-bottom: 15px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.team-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.role-badge {
+    background-color: #8C5A32;
+    color: #ffffff;
+    font-family: 'Tajawal', sans-serif;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* تنسيق كتلة الإشراف والتوجيه في الأسفل */
+.supervision-block {
+    background-color: #FDF9F5;
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    border: 1px solid #EFE0D3;
+    margin-top: 5px;
+}
+
+.supervisor-highlight {
+    color: #8C5A32 !important;
+    font-size: 1.35rem !important;
+}
