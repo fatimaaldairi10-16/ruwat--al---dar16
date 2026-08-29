@@ -1411,3 +1411,32 @@ header nav a,
     color: #382B22 !important;
     padding: 8px 14px !important;
 }
+/* 1. تكبير خط الروابط الجانبية (عن المبادرة، الحكايات، إلخ) */
+header ul li a,
+header nav a,
+.nav-link {
+    font-size: 1.5rem !important;      /* حجم خط واضح وكبير */
+    font-weight: 700 !important;
+    color: #382B22 !important;
+    padding: 0 15px !important;
+}
+
+/* 2. إلغاء الإطار الداخلي والتكبير المباشر لمستطيل الشعارات */
+div[class*="logo"],
+header div:has(img) {
+    border: none !important;           /* إزالة الإطار المزدوج */
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: auto !important;
+}
+
+/* 3. تكبير الصورة نفسها لتشغل المساحة بالكامل */
+div[class*="logo"] img,
+header img[src*="logo"],
+header img {
+    height: 110px !important;         /* تكبير الارتفاع ليصبح مستطيل عريض وبارز */
+    max-height: 110px !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
