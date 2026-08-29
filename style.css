@@ -597,3 +597,74 @@ header.site-header {
   }
 }
 https://fatimaaldairi10-16.github.io/ruwat--al---dar16/
+
+/* --- تنسيقات متجاوبة للهواتف (Mobile Responsiveness) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. ترتيب الهيدر (الشريط العلوي) */
+    header, .header-container {
+        padding: 15px 10px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 15px !important;
+    }
+
+    /* تكبير وتوسيط عنوان "رُواةُ الدَّار" */
+    .logo-text, header h1 {
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* جعل الشعارات تمتد بعرض مناسب وتكون واضحة */
+    .header-logos, .logos-container img {
+        max-width: 90% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    /* جعل روابط القائمة في سطر واحد أفقياً متناسق */
+    nav, .header-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important; /* يمنع نزول الكلام في سطر جديد */
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        overflow-x: auto; /* يسمح بالتمرير البسيط إن كانت الشاشة صغيرة جداً */
+    }
+
+    nav a, .header-nav a {
+        font-size: 0.95rem !important;
+        white-space: nowrap !important; /* يمنع انقسام الكلمة */
+        padding: 5px 8px !important;
+    }
+
+    /* 2. ضبط بطاقة الغلاف والمقدمة */
+    .hero-container, .hero-frame {
+        flex-direction: column !important;
+        padding: 10px !important;
+    }
+
+    .hero-cover-img {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+        border-radius: 12px !important;
+    }
+
+    /* 3. ترتيب البطاقات (الحكايات والرواة) فوق بعضها بانتظام */
+    .cards-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+    }
+}
