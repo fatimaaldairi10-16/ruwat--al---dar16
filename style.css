@@ -1,38 +1,46 @@
-/* ==========================================================================
+/* =========================================================
    1. المتغيرات والتصفير العام
-   ========================================================================== */
+   ========================================================= */
+
 :root {
-  --bg-main: #EFE9DD;
-  --bg-card: #F8F4EC;
-  --text-main: #382B22;
-  --text-muted: #6E5D4F;
-  --accent-gold: #C8BCAC;
-  --accent-brown: #8C5A32;
-  --accent-maroon: #6B2329;
-  --accent-green: #3E5242;
+    --bg-main: #EFE9DD;
+    --bg-card: #F8F4EC;
+    --text-main: #382B22;
+    --text-muted: #6E5D4F;
+    --accent-gold: #C8BCAC;
+    --accent-brown: #8C5A32;
+    --accent-maroon: #6B2329;
+    --accent-green: #3E5242;
 }
+
+
+/* Reset */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
+
 body {
-  font-family: 'Tajawal', 'Amiri', serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  direction: rtl;
-  line-height: 1.8;
-  overflow-x: hidden;
+    font-family: 'Tajawal', 'Amiri', serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    direction: rtl;
+    line-height: 1.8;
+    overflow-x: hidden;
 }
-/* ==========================================
-   تنسيق الهيدر الأنيق والمتوازن
-   ========================================== */
+
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
 
 header.site-header {
     background-color: #ffffff !important;
@@ -41,646 +49,1273 @@ header.site-header {
     margin: 20px auto 30px auto !important;
     width: 92% !important;
     max-width: 1200px !important;
+
     box-shadow: 0 8px 25px rgba(56, 43, 34, 0.06) !important;
+
     border: 1px solid #EFE8DC !important;
+
     position: sticky !important;
     top: 15px !important;
+
     z-index: 1000 !important;
 }
+
 
 .site-header .header-container {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
+
     width: 100% !important;
+
     gap: 20px !important;
 }
 
-/* 1. عنوان الموقع (يمين) */
+
+/* اسم الموقع */
+
 .site-header .header-brand {
     flex: 1 !important;
     text-align: right !important;
 }
 
+
 .site-header .brand-name {
     font-family: 'Amiri', serif !important;
+
     font-size: 2.1rem !important;
+
     font-weight: 700 !important;
+
     color: #382B22 !important;
+
     margin: 0 !important;
+
     white-space: nowrap !important;
 }
 
-/* 2. الشعارات المتعددة (منتصف - بحجم متناسق وفاخر) */
+
+/* الشعار */
+
 .site-header .header-logo {
     flex: 2 !important;
+
     display: flex !important;
+
     justify-content: center !important;
     align-items: center !important;
 }
 
+
 .site-header img.school-logo {
-    height: 65px !important;          /* ارتفاع متناسق يمنع التمدد المفرط */
+    height: 65px !important;
+
     max-height: 70px !important;
+
     width: auto !important;
+
     max-width: 100% !important;
+
     object-fit: contain !important;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.03)) !important;
+
+    filter: drop-shadow(
+        0 2px 4px rgba(0, 0, 0, 0.03)
+    ) !important;
+
     transition: transform 0.3s ease !important;
 }
+
 
 .site-header img.school-logo:hover {
     transform: scale(1.02);
 }
 
-/* 3. روابط التنقل (يسار) */
+
+/* روابط التنقل */
+
 .site-header .header-nav {
     flex: 1.5 !important;
+
     display: flex !important;
+
     justify-content: flex-end !important;
+
     align-items: center !important;
+
     gap: 22px !important;
 }
 
+
 .site-header .header-nav a {
     font-family: 'Tajawal', sans-serif !important;
+
     font-size: 1.05rem !important;
+
     font-weight: 700 !important;
+
     color: #382B22 !important;
+
     text-decoration: none !important;
+
     white-space: nowrap !important;
+
     position: relative !important;
+
     padding: 5px 0 !important;
+
     transition: color 0.3s ease !important;
 }
 
-/* خط سفلِي تفاعلي عند التمرير على الروابط */
+
+/* الخط أسفل الرابط */
+
 .site-header .header-nav a::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    width: 0% !important;
-    height: 2px !important;
-    background-color: #8C5A32 !important;
-    transition: width 0.3s ease !important;
+    content: '';
+
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: #8C5A32;
+
+    transition: width 0.3s ease;
 }
+
 
 .site-header .header-nav a:hover {
     color: #8C5A32 !important;
 }
 
+
 .site-header .header-nav a:hover::after {
-    width: 100% !important;
-}
-/* ==========================================================================
-   3. قسم الهيرو (Hero Section)
-   ========================================================================== */
-.hero-section {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
+    width: 100%;
 }
 
-.hero-frame {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1100px;
-  background-color: #F5F2EB;
-  border-radius: 16px;
-  padding: 30px;
-  gap: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+/* =========================================================
+   3. HERO
+   ========================================================= */
+
+.hero-section {
+    padding: 40px 20px;
+
+    display: flex;
+
+    justify-content: center;
 }
+
+
+.hero-frame {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    background-color: #F5F2EB;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    gap: 20px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
 
 .hero-cover-img,
 .hero-door-img {
-  width: 220px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 220px;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.15);
 }
+
 
 .hero-text-box {
-  text-align: center;
-  max-width: 500px;
+    text-align: center;
+
+    max-width: 500px;
+
+    flex: 1;
 }
+
 
 .brand-title {
-  font-family: 'Amiri', serif;
-  font-size: 3.5rem;
-  color: var(--text-main);
-  line-height: 1.2;
+    font-family: 'Amiri', serif;
+
+    font-size: 3.5rem;
+
+    color: var(--text-main);
+
+    line-height: 1.2;
 }
+
 
 .hero-quote {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--text-main);
-  margin-top: 10px;
+    font-size: 1.6rem;
+
+    font-weight: bold;
+
+    color: var(--text-main);
+
+    margin-top: 10px;
 }
+
 
 .hero-subtext {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin: 10px 0;
+    font-size: 1.1rem;
+
+    color: var(--text-muted);
+
+    margin: 10px 0;
 }
+
 
 .decorative-line {
-  color: var(--accent-brown);
-  margin: 15px 0;
+    color: var(--accent-brown);
+
+    margin: 15px 0;
 }
+
 
 .btn-start {
-  display: inline-block;
-  padding: 12px 35px;
-  background-color: var(--text-main);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+    display: inline-block;
+
+    padding: 12px 35px;
+
+    background-color: var(--text-main);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: background 0.3s ease;
 }
+
 
 .btn-start:hover {
-  background-color: var(--accent-brown);
+    background-color: var(--accent-brown);
 }
 
-/* ==========================================================================
-   4. الأقسام العامة والتنسيق الإجمالي (Sections)
-   ========================================================================== */
+
+/* =========================================================
+   4. الأقسام العامة
+   ========================================================= */
+
 .section-container {
-  max-width: 1100px;
-  margin: 70px auto;
-  padding: 0 20px;
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 70px auto;
+
+    padding: 0 20px;
 }
+
 
 .section-title {
-  font-family: 'Amiri', serif;
-  font-size: 2.8rem;
-  color: var(--text-main);
-  text-align: center;
-  margin-bottom: 40px;
-  position: relative;
+    font-family: 'Amiri', serif;
+
+    font-size: 2.8rem;
+
+    color: var(--text-main);
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    position: relative;
 }
+
 
 .section-title::after {
-  content: '';
-  display: block;
-  width: 150px;
-  height: 3px;
-  background: linear-gradient(to left, transparent, var(--accent-brown), transparent);
-  margin: 10px auto 0 auto;
+    content: '';
+
+    display: block;
+
+    width: 150px;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--accent-brown),
+            transparent
+        );
+
+    margin: 10px auto 0 auto;
 }
 
-/* ==========================================================================
-   5. قسم عن المبادرة (About)
-   ========================================================================== */
+
+/* =========================================================
+   5. ABOUT
+   ========================================================= */
+
 .about-video-container {
-  max-width: 800px;
-  margin: 0 auto 50px auto;
-  text-align: center;
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 0 auto 50px auto;
+
+    text-align: center;
 }
+
 
 .video-title {
-  font-family: 'Amiri', serif;
-  font-size: 2rem;
-  margin-bottom: 15px;
+    font-family: 'Amiri', serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
 }
+
 
 .about-video-container video {
-  width: 100%;
-  border-radius: 12px;
-  border: 3px solid var(--accent-gold);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    border-radius: 12px;
+
+    border: 3px solid var(--accent-gold);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
+
+/* بطاقات الرؤية والرسالة والفكرة */
 
 .about-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
 }
+
 
 .about-card {
-  background-color: var(--bg-card);
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    background-color: var(--bg-card);
+
+    padding: 25px 30px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-.card-vision { border-right: 6px solid var(--accent-green); }
-.card-mission { border-right: 6px solid var(--accent-maroon); }
-.card-idea { border-right: 6px solid var(--text-main); }
+
+.card-vision {
+    border-right: 6px solid var(--accent-green);
+}
+
+
+.card-mission {
+    border-right: 6px solid var(--accent-maroon);
+}
+
+
+.card-idea {
+    border-right: 6px solid var(--text-main);
+}
+
 
 .about-card-title {
-  font-family: 'Amiri', serif;
-  font-size: 2rem;
-  margin-bottom: 10px;
+    font-family: 'Amiri', serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 10px;
 }
 
-.card-vision .about-card-title { color: var(--accent-green); }
-.card-mission .about-card-title { color: var(--accent-maroon); }
-.card-idea .about-card-title { color: var(--text-main); }
+
+.card-vision .about-card-title {
+    color: var(--accent-green);
+}
+
+
+.card-mission .about-card-title {
+    color: var(--accent-maroon);
+}
+
+
+.card-idea .about-card-title {
+    color: var(--text-main);
+}
+
 
 .about-card-text {
-  font-size: 1.1rem;
-  color: var(--text-main);
+    font-size: 1.1rem;
+
+    color: var(--text-main);
 }
 
-/* ==========================================================================
-   6. قسم الحكايات والقسائم (Tales & Cards Grid)
-   ========================================================================== */
+
+/* =========================================================
+   6. الحكايات
+   ========================================================= */
+
 .cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  width: 100%;
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+
+    width: 100%;
 }
+
 
 .card {
-  background-color: var(--bg-card);
-  border: 2px dashed var(--accent-gold);
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background-color: var(--bg-card);
+
+    border: 2px dashed var(--accent-gold);
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    min-width: 0;
 }
+
 
 .story-title {
-  font-family: 'Amiri', serif;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 15px;
+    font-family: 'Amiri', serif;
+
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    margin-bottom: 15px;
 }
+
+
+.card-media {
+    width: 100%;
+
+    min-width: 0;
+}
+
 
 .card-media video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  border: 1px solid var(--accent-gold);
-  background: #000;
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    border-radius: 8px;
+
+    border: 1px solid var(--accent-gold);
+
+    background: #000;
 }
 
-/* ==========================================================================
-   7. قسم الرواة (Narrators)
-   ========================================================================== */
+
+/* =========================================================
+   7. الرواة
+   ========================================================= */
+
 .narrators-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+
+    width: 100%;
 }
+
 
 .narrator-card {
-  background-color: var(--bg-card);
-  border: 2px solid var(--accent-gold);
-  border-radius: 16px;
-  padding: 30px 20px;
-  text-align: center;
-  width: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-card);
+
+    border: 2px solid var(--accent-gold);
+
+    border-radius: 16px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    width: 260px;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 
 .narrator-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.06);
 }
+
 
 .narrator-avatar-box {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 15px auto;
-  border-radius: 50%;
-  border: 3px solid var(--text-main);
-  padding: 3px;
-  flex-shrink: 0;
+    width: 120px;
+
+    height: 120px;
+
+    margin: 0 auto 15px auto;
+
+    border-radius: 50%;
+
+    border: 3px solid var(--text-main);
+
+    padding: 3px;
+
+    flex-shrink: 0;
 }
+
 
 .narrator-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
 }
+
 
 .narrator-name {
-  font-family: 'Amiri', serif;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+    font-family: 'Amiri', serif;
+
+    font-size: 1.5rem;
+
+    margin-bottom: 5px;
 }
+
 
 .narrator-job {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  margin-bottom: 15px;
-  min-height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-size: 0.95rem;
+
+    color: var(--text-muted);
+
+    margin-bottom: 15px;
+
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 }
+
 
 .narrator-location {
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: var(--accent-brown);
-  background-color: #EFE8DC;
-  padding: 4px 14px;
-  border-radius: 15px;
-  display: inline-block;
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    color: var(--accent-brown);
+
+    background-color: #EFE8DC;
+
+    padding: 4px 14px;
+
+    border-radius: 15px;
+
+    display: inline-block;
 }
 
-/* ==========================================================================
-   8. قسم التقييم والاستبيان (Feedback)
-   ========================================================================== */
+
+/* =========================================================
+   8. FEEDBACK
+   ========================================================= */
+
 .feedback-card {
-  background: linear-gradient(135deg, #FAF6F0 0%, #EFE8DC 100%);
-  border: 2px solid var(--accent-gold);
-  border-radius: 20px;
-  padding: 40px 20px;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
+    width: 100%;
+
+    max-width: 800px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #FAF6F0 0%,
+            #EFE8DC 100%
+        );
+
+    border: 2px solid var(--accent-gold);
+
+    border-radius: 20px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    margin: 0 auto;
 }
+
 
 .feedback-quote {
-  font-family: 'Amiri', serif;
-  font-size: 1.8rem;
-  color: var(--accent-maroon);
-  margin-bottom: 15px;
+    font-family: 'Amiri', serif;
+
+    font-size: 1.8rem;
+
+    color: var(--accent-maroon);
+
+    margin-bottom: 15px;
 }
+
 
 .feedback-text {
-  font-size: 1.1rem;
-  margin-bottom: 25px;
+    font-size: 1.1rem;
+
+    margin-bottom: 25px;
 }
+
 
 .qr-container {
-  display: inline-block;
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid var(--accent-gold);
+    display: inline-block;
+
+    max-width: 100%;
+
+    background: #fff;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid var(--accent-gold);
 }
+
 
 .qr-image {
-  width: 160px;
-  height: 160px;
-  object-fit: contain;
+    display: block;
+
+    width: 160px;
+
+    height: 160px;
+
+    max-width: 100%;
+
+    object-fit: contain;
 }
+
 
 .qr-hint {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 8px;
+    font-size: 0.85rem;
+
+    color: var(--text-muted);
+
+    margin-top: 8px;
 }
 
-/* ==========================================================================
-   9. بطاقة التوقيع والحقوق (Signature Card)
-   ========================================================================== */
+
+/* =========================================================
+   9. بطاقة التوقيع
+   ========================================================= */
+
 .signature-card {
-  max-width: 600px;
-  margin: 60px auto 40px auto;
-  padding: 10px;
-  background-color: var(--bg-card);
-  border-radius: 16px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: calc(100% - 30px);
+
+    max-width: 600px;
+
+    margin: 60px auto 40px auto;
+
+    padding: 10px;
+
+    background-color: var(--bg-card);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.05);
 }
+
 
 .signature-border {
-  border: 2px dashed var(--accent-brown);
-  border-radius: 12px;
-  padding: 25px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    border: 2px dashed var(--accent-brown);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
 }
+
 
 .decorative-star {
-  color: var(--accent-brown);
+    color: var(--accent-brown);
 }
+
 
 .section-label {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+    font-size: 0.9rem;
+
+    color: var(--text-muted);
 }
+
 
 .person-name {
-  font-family: 'Amiri', serif;
-  font-size: 1.5rem;
-  color: var(--text-main);
+    font-family: 'Amiri', serif;
+
+    font-size: 1.5rem;
+
+    color: var(--text-main);
+
+    overflow-wrap: anywhere;
 }
+
+
+.school-name {
+    overflow-wrap: anywhere;
+}
+
 
 .supervisor-highlight {
-  color: var(--accent-maroon);
+    color: var(--accent-maroon);
 }
+
 
 .credits-divider {
-  width: 70%;
-  height: 1px;
-  background-color: var(--accent-gold);
-  margin: 0 auto;
+    width: 70%;
+
+    height: 1px;
+
+    background-color: var(--accent-gold);
+
+    margin: 0 auto;
 }
+
 
 .team-title {
-  font-weight: bold;
-  font-size: 1rem;
-  margin-bottom: 10px;
+    font-weight: bold;
+
+    font-size: 1rem;
+
+    margin-bottom: 10px;
 }
+
 
 .team-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
 }
+
 
 .team-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 3px;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
 }
+
 
 .role-badge {
-  font-size: 0.8rem;
-  background-color: #EEE7D8;
-  color: var(--accent-brown);
-  padding: 2px 10px;
-  border-radius: 10px;
+    font-size: 0.8rem;
+
+    background-color: #EEE7D8;
+
+    color: var(--accent-brown);
+
+    padding: 2px 10px;
+
+    border-radius: 10px;
 }
 
-/* ==========================================================================
-   10. التذييل (Main Footer)
-   ========================================================================== */
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+
 .main-footer {
-  background-color: #1F1915;
-  color: #C8BCAC;
-  padding: 40px 20px;
-  text-align: center;
-  margin-top: 60px;
-  width: 100%;
+    background-color: #1F1915;
+
+    color: #C8BCAC;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    margin-top: 60px;
+
+    width: 100%;
 }
+
 
 .footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
 }
+
 
 .social-links {
-  display: flex;
-  gap: 15px;
+    display: flex;
+
+    gap: 15px;
 }
+
 
 .social-links a {
-  color: #C8BCAC;
-  text-decoration: none;
-  font-weight: bold;
+    color: #C8BCAC;
+
+    text-decoration: none;
+
+    font-weight: bold;
 }
+
 
 .footer-logo {
-  font-family: 'Amiri', serif;
-  font-size: 1.8rem;
-  color: #fff;
+    font-family: 'Amiri', serif;
+
+    font-size: 1.8rem;
+
+    color: #fff;
 }
+
 
 .copyright {
-  font-size: 0.85rem;
-  color: #8C7F72;
+    font-size: 0.85rem;
+
+    color: #8C7F72;
 }
 
-/* ==========================================================================
-   11. تجاوب الصفحة مع الهواتف (Responsive)
-   ========================================================================== */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .header-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
+/* =========================================================
+   11. RESPONSIVE - الهواتف
+   ========================================================= */
 
-  .school-logo {
-    height: 65px;
-  }
-
-  .hero-frame {
-    flex-direction: column;
-  }
-
-  .hero-cover-img,
-  .hero-door-img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-  }
-
-  .brand-title {
-    font-size: 2.5rem;
-  }
-
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-https://fatimaaldairi10-16.github.io/ruwat--al---dar16/
-
-/* --- تنسيقات متجاوبة للهواتف (Mobile Responsiveness) --- */
 @media screen and (max-width: 768px) {
-    
-    /* 1. ترتيب الهيدر (الشريط العلوي) */
-    header, .header-container {
-        padding: 15px 10px !important;
+
+
+    /* ---------- HEADER ---------- */
+
+    header.site-header {
+        width: calc(100% - 24px) !important;
+
+        margin: 12px auto 20px auto !important;
+
+        padding: 14px 12px !important;
+
+        position: relative !important;
+
+        top: 0 !important;
+    }
+
+
+    .site-header .header-container {
         flex-direction: column !important;
-        align-items: center !important;
-        gap: 15px !important;
-    }
 
-    /* تكبير وتوسيط عنوان "رُواةُ الدَّار" */
-    .logo-text, header h1 {
-        font-size: 2rem !important;
-        margin-bottom: 5px !important;
-    }
-
-    /* جعل الشعارات تمتد بعرض مناسب وتكون واضحة */
-    .header-logos, .logos-container img {
-        max-width: 90% !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
-
-    /* جعل روابط القائمة في سطر واحد أفقياً متناسق */
-    nav, .header-nav {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important; /* يمنع نزول الكلام في سطر جديد */
-        justify-content: center !important;
-        align-items: center !important;
         gap: 12px !important;
-        width: 100% !important;
-        overflow-x: auto; /* يسمح بالتمرير البسيط إن كانت الشاشة صغيرة جداً */
-    }
 
-    nav a, .header-nav a {
-        font-size: 0.95rem !important;
-        white-space: nowrap !important; /* يمنع انقسام الكلمة */
-        padding: 5px 8px !important;
-    }
-
-    /* 2. ضبط بطاقة الغلاف والمقدمة */
-    .hero-container, .hero-frame {
-        flex-direction: column !important;
-        padding: 10px !important;
-    }
-
-    .hero-cover-img {
-        width: 100% !important;
-        max-width: 320px !important;
-        height: auto !important;
-        border-radius: 12px !important;
-    }
-
-    /* 3. ترتيب البطاقات (الحكايات والرواة) فوق بعضها بانتظام */
-    .cards-grid {
-        display: flex !important;
-        flex-direction: column !important;
         align-items: center !important;
-        gap: 20px !important;
-        width: 100% !important;
     }
+
+
+    .site-header .header-brand {
+        width: 100% !important;
+
+        flex: none !important;
+
+        text-align: center !important;
+    }
+
+
+    .site-header .brand-name {
+        font-size: 1.9rem !important;
+    }
+
+
+    .site-header .header-logo {
+        width: 100% !important;
+
+        flex: none !important;
+    }
+
+
+    .site-header img.school-logo {
+        width: auto !important;
+
+        max-width: 90% !important;
+
+        height: auto !important;
+
+        max-height: 60px !important;
+    }
+
+
+    .site-header .header-nav {
+        width: 100% !important;
+
+        flex: none !important;
+
+        display: flex !important;
+
+        justify-content: center !important;
+
+        align-items: center !important;
+
+        flex-wrap: wrap !important;
+
+        gap: 5px 12px !important;
+    }
+
+
+    .site-header .header-nav a {
+        font-size: 0.82rem !important;
+
+        padding: 4px 2px !important;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero-section {
+        padding: 20px 12px !important;
+    }
+
+
+    .hero-frame {
+        width: 100% !important;
+
+        padding: 20px 12px !important;
+
+        gap: 20px !important;
+
+        flex-direction: column !important;
+    }
+
+
+    .hero-cover-img,
+    .hero-door-img {
+        width: 100% !important;
+
+        max-width: 250px !important;
+
+        height: auto !important;
+
+        aspect-ratio: 220 / 350;
+
+        object-fit: cover !important;
+    }
+
+
+    .hero-text-box {
+        width: 100% !important;
+
+        max-width: 100% !important;
+    }
+
+
+    .brand-title {
+        font-size: 2.5rem !important;
+    }
+
+
+    .hero-quote {
+        font-size: 1.25rem !important;
+    }
+
+
+    .hero-subtext {
+        font-size: 0.95rem !important;
+    }
+
+
+    .btn-start {
+        padding: 10px 25px !important;
+    }
+
+
+    /* ---------- SECTIONS ---------- */
+
+    .section-container {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 50px auto !important;
+
+        padding: 0 14px !important;
+    }
+
+
+    .section-title {
+        font-size: 2.2rem !important;
+
+        margin-bottom: 30px !important;
+    }
+
+
+    /* ---------- ABOUT VIDEO ---------- */
+
+    .about-video-container {
+        width: 100% !important;
+
+        margin-bottom: 35px !important;
+    }
+
+
+    .video-title {
+        font-size: 1.7rem !important;
+    }
+
+
+    .about-video-container video {
+        width: 100% !important;
+
+        max-width: 100% !important;
+    }
+
+
+    /* ---------- ABOUT CARDS ---------- */
+
+    .about-cards-container {
+        width: 100% !important;
+
+        gap: 18px !important;
+    }
+
+
+    .about-card {
+        padding: 20px 18px !important;
+    }
+
+
+    .about-card-title {
+        font-size: 1.7rem !important;
+    }
+
+
+    .about-card-text {
+        font-size: 1rem !important;
+    }
+
+
+    /* ---------- TALES ---------- */
+
+    .cards-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+
+        gap: 20px !important;
+    }
+
 
     .card {
         width: 100% !important;
-        max-width: 340px !important;
-        margin: 0 auto !important;
+
+        min-width: 0 !important;
+
+        padding: 16px !important;
     }
-}
-/* Container for the menu items */
-.nav-links {
-    display: flex;
-    flex-wrap: nowrap;          /* يمنع العناصر من النزول لسطر جديد */
-    justify-content: space-between; /* توزيع العناصر بالتساوي على العرض */
-    align-items: center;
-    width: 100%;
-    gap: 5px;                  /* تقليل المسافة بين الكلمات */
+
+
+    .story-title {
+        font-size: 1.4rem !important;
+    }
+
+
+    .card-media {
+        width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    .card-media video {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        height: auto !important;
+    }
+
+
+    /* ---------- NARRATORS ---------- */
+
+    .narrators-grid {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        justify-items: center !important;
+
+        gap: 20px !important;
+
+        width: 100% !important;
+    }
+
+
+    .narrator-card {
+        width: 100% !important;
+
+        max-width: 300px !important;
+    }
+
+
+    /* ---------- FEEDBACK ---------- */
+
+    .feedback-card {
+        width: 100% !important;
+
+        padding: 28px 15px !important;
+    }
+
+
+    .feedback-quote {
+        font-size: 1.45rem !important;
+    }
+
+
+    .feedback-text {
+        font-size: 1rem !important;
+    }
+
+
+    .qr-image {
+        width: 140px !important;
+
+        height: 140px !important;
+    }
+
+
+    /* ---------- SIGNATURE ---------- */
+
+    .signature-card {
+        width: calc(100% - 24px) !important;
+
+        margin: 40px auto 30px auto !important;
+    }
+
+
+    .signature-border {
+        padding: 20px 12px !important;
+    }
+
+
+    .person-name {
+        font-size: 1.3rem !important;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .main-footer {
+        padding: 30px 15px !important;
+    }
+
 }
 
-/* Individual menu link style */
-.nav-links a {
-    white-space: nowrap;        /* يمنع الكلمة الواحدة من الانقسام */
-    font-size: 13px;            /* تصغير حجم الخط ليلائم عرض شاشة الجوال */
-    padding: 4px 2px;
+
+/* =========================================================
+   12. الهواتف الصغيرة جدًا
+   ========================================================= */
+
+@media screen and (max-width: 400px) {
+
+
+    .site-header .brand-name {
+        font-size: 1.7rem !important;
+    }
+
+
+    .site-header .header-nav {
+        gap: 4px 8px !important;
+    }
+
+
+    .site-header .header-nav a {
+        font-size: 0.75rem !important;
+    }
+
+
+    .brand-title {
+        font-size: 2.2rem !important;
+    }
+
+
+    .hero-quote {
+        font-size: 1.1rem !important;
+    }
+
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+
+    .hero-cover-img,
+    .hero-door-img {
+        max-width: 220px !important;
+    }
+
 }
