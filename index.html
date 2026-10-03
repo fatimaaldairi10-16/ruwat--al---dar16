@@ -1,242 +1,558 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>رواة الدار - أرشيف الحكايات البحرينية</title>
-    <!-- خط Tajawal و Amiri من Google Fonts -->
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- 1. شريط الملاحة (Header) -->
+    <!-- =========================================================
+         1. HEADER
+         ========================================================= -->
+
     <header class="site-header">
+
         <div class="header-container">
-            <!-- اليمين: عنوان الموقع -->
+
+            <!-- اسم المبادرة -->
             <div class="header-brand">
                 <h1 class="brand-name">رُواةُ الدَّار</h1>
             </div>
 
-            <!-- المنتصف: الشعار -->
+            <!-- شعار المدرسة والوزارة -->
             <div class="header-logo">
-                <img src="School-logo.jpeg" alt="شعار المدرسة والوزارة" class="school-logo">
+                <img
+                    src="School-logo.jpeg"
+                    alt="شعار المدرسة والوزارة"
+                    class="school-logo">
             </div>
 
-            <!-- اليسار: روابط التصفح -->
+            <!-- القائمة -->
             <nav class="header-nav">
+
                 <a href="#about">عن المبادرة</a>
+
                 <a href="#tales">الحكايات</a>
+
                 <a href="#narrators">الرواة</a>
-                <a href="#feedback">اعطنا رأيك</a>
+
+                <a href="#feedback">أعطنا رأيك</a>
+
             </nav>
+
         </div>
+
     </header>
 
-    <!-- 2. قسم الهيرو الرئيسي -->
+
+    <!-- =========================================================
+         2. HERO
+         ========================================================= -->
+
     <section class="hero-section">
+
         <div class="hero-frame">
+
             <!-- صورة الغلاف -->
-            <img src="cover.jpeg" alt="غلاف المبادرة" class="hero-cover-img">
-            
-            <!-- النص في المنتصف -->
+            <img
+                src="cover.jpeg"
+                alt="غلاف مبادرة رواة الدار"
+                class="hero-cover-img">
+
+            <!-- النص -->
             <div class="hero-text-box">
-                <h1 class="brand-title">رُواةُ الدَّار</h1>
-                <p class="hero-quote">«كان يا ما كان في البحرين»</p>
-                <p class="hero-subtext">أرشيفٌ من الحكايات والذكريات البحرينية</p>
-                <div class="decorative-line">✦ ━━━━ ✦</div>
-                <a href="#tales" class="btn-start">ابدأ الحكاية ✦</a>
+
+                <h1 class="brand-title">
+                    رُواةُ الدَّار
+                </h1>
+
+                <p class="hero-quote">
+                    «كان يا ما كان في البحرين»
+                </p>
+
+                <p class="hero-subtext">
+                    أرشيفٌ من الحكايات والذكريات البحرينية
+                </p>
+
+                <div class="decorative-line">
+                    ✦ ━━━━ ✦
+                </div>
+
+                <a href="#tales" class="btn-start">
+                    ابدأ الحكاية ✦
+                </a>
+
             </div>
 
             <!-- صورة الباب -->
-            <img src="door.jpeg" alt="باب تراثي" class="hero-door-img">
+            <img
+                src="door.jpeg"
+                alt="باب تراثي"
+                class="hero-door-img">
+
         </div>
+
     </section>
 
-    <!-- 3. قسم عن المبادرة (About Section) -->
+
+    <!-- =========================================================
+         3. ABOUT
+         ========================================================= -->
+
     <section id="about" class="section-container">
-        <h2 class="section-title">عن المبادرة</h2>
-        
+
+        <h2 class="section-title">
+            عن المبادرة
+        </h2>
+
+
         <!-- الفيديو التعريفي -->
         <div class="about-video-container">
-            <h3 class="video-title">المقطع التعريفي</h3>
-            <video controls playsinline preload="metadata" width="100%">
+
+            <h3 class="video-title">
+                المقطع التعريفي
+            </h3>
+
+            <video
+                controls
+                playsinline
+                preload="metadata">
+
                 <source src="video.mp4" type="video/mp4">
+
                 متصفحك لا يدعم تشغيل الفيديو.
+
             </video>
+
         </div>
 
-        <!-- شبكة الرؤية والرسالة وفكرة المبادرة -->
+
+        <!-- بطاقات الرؤية والرسالة والفكرة -->
         <div class="about-cards-container">
+
+
+            <!-- الرؤية -->
             <div class="about-card card-vision">
-                <h3 class="about-card-title">الرؤية</h3>
+
+                <h3 class="about-card-title">
+                    الرؤية
+                </h3>
+
                 <p class="about-card-text">
                     أن لا تنطفئ الحكاياتُ برحيلِ رُواتها، بل تبقى إرثًا حيًّا يسكن القلوب، تتناقله الأجيالُ كما تتوارثُ النخيلُ ثمرَها، لتظلَّ «رُواةُ الدار» حارسةً لذاكرة الوطن، وصوتًا لماضٍ يستحق أن يُروى.
                 </p>
+
             </div>
 
+
+            <!-- الرسالة -->
             <div class="about-card card-mission">
-                <h3 class="about-card-title">الرسالة</h3>
+
+                <h3 class="about-card-title">
+                    الرسالة
+                </h3>
+
                 <p class="about-card-text">
                     نؤمن بأن لكلِّ حكايةٍ روحًا تستحقُّ الخلود، ولكلِّ راوٍ أثرًا لا ينبغي أن يُنسى، لذا نسعى إلى جمع روايات كبار السن، وحفظها، ونقلها بأمانةٍ إلى الأجيال، لتظلَّ ذاكرة الوطن نابضةً بالحياة.
                 </p>
+
             </div>
 
+
+            <!-- فكرة المبادرة -->
             <div class="about-card card-idea">
-                <h3 class="about-card-title">فكرة المبادرة</h3>
+
+                <h3 class="about-card-title">
+                    فكرة المبادرة
+                </h3>
+
                 <p class="about-card-text">
                     قامت مبادرة «رُواةُ الدار» على إحياء ذاكرة الوطن عبر توثيق الحكايات الشفهية لكبار السن، حيث جُمعت رواياتهم وسُجِّلت، ثم أُعيدت صياغتها بلغةٍ قريبة من جيل الشباب دون المساس بروحها الأصيلة.
                 </p>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- 4. قسم الحكايات (Tales Section) -->
+
+    <!-- =========================================================
+         4. TALES
+         ========================================================= -->
+
     <section id="tales" class="section-container">
-        <h2 class="section-title">الحكايات</h2>
-        
+
+        <h2 class="section-title">
+            الحكايات
+        </h2>
+
+
         <div class="cards-grid">
+
+
+            <!-- الحكاية الأولى -->
             <div class="card video-card">
-                <h3 class="story-title">وَ كانَتِ البَناتُ أُنسًا</h3>
+
+                <h3 class="story-title">
+                    وَ كانَتِ البَناتُ أُنسًا
+                </h3>
+
                 <div class="card-media">
-                    <video controls playsinline preload="metadata" width="100%">
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata">
+
                         <source src="story1.mp4" type="video/mp4">
+
                         متصفحك لا يدعم تشغيل الفيديو.
+
                     </video>
+
                 </div>
 
+            </div>
+
+
+            <!-- الحكاية الثانية -->
             <div class="card video-card">
-                <h3 class="story-title">حينَ كان للخوفِ حكاية</h3>
+
+                <h3 class="story-title">
+                    حينَ كان للخوفِ حكاية
+                </h3>
+
                 <div class="card-media">
-                    <video controls playsinline preload="metadata" width="100%">
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata">
+
                         <source src="story4.mp4" type="video/mp4">
+
                         متصفحك لا يدعم تشغيل الفيديو.
+
                     </video>
+
                 </div>
+
             </div>
-<div class="card video-card">
-                <h3 class="story-title">غنيمةُ الأسد !</h3>
+
+
+            <!-- الحكاية الثالثة -->
+            <div class="card video-card">
+
+                <h3 class="story-title">
+                    غنيمةُ الأسد!
+                </h3>
+
                 <div class="card-media">
-                    <video controls playsinline preload="metadata" width="100%">
+
+                    <video
+                        controls
+                        playsinline
+                        preload="metadata">
+
                         <source src="story5.mp4" type="video/mp4">
+
                         متصفحك لا يدعم تشغيل الفيديو.
+
                     </video>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
-<!-- 5. قسم الرواة (Narrators Section) -->
+
+
+    <!-- =========================================================
+         5. NARRATORS
+         ========================================================= -->
+
     <section id="narrators" class="section-container">
-        <h2 class="section-title">الرواة</h2>
-        
 
-            <!-- 1. فوزية الهرامسة -->
+        <h2 class="section-title">
+            الرواة
+        </h2>
+
+
+        <div class="narrators-grid">
+
+
+            <!-- الراوية الأولى -->
             <div class="card narrator-card">
+
                 <div class="narrator-avatar-box">
-                    <img src="fawzia.jpeg" alt="فوزية ( أم ثامر )" class="narrator-img">
+
+                    <img
+                        src="fawzia.jpeg"
+                        alt="فوزية أم ثامر"
+                        class="narrator-img">
+
                 </div>
-                <h3 class="narrator-name">فوزية الهرامسة ( أم ثامر )</h3>
-                <p class="narrator-job">راوية للتراث الشفهي</p>
-                <p class="narrator-location">📍 قلالي</p>
+
+                <h3 class="narrator-name">
+                    فوزية الهرامسة (أم ثامر)
+                </h3>
+
+                <p class="narrator-job">
+                    راوية للتراث الشفهي
+                </p>
+
+                <p class="narrator-location">
+                    📍 قلالي
+                </p>
+
             </div>
 
-            <!-- 2. أ.عبدالله علي المطوع -->
+
+            <!-- الراوي الثاني -->
             <div class="card narrator-card">
+
                 <div class="narrator-avatar-box">
-                    <img src="ali.jpeg" alt="أ.عبدالله علي المطوع" class="narrator-img">
+
+                    <img
+                        src="ali.jpeg"
+                        alt="أ. عبدالله علي المطوع"
+                        class="narrator-img">
+
                 </div>
-                <h3 class="narrator-name">أ.عبدالله علي المطوع</h3>
-                <p class="narrator-job">معلم لغة عربية متقاعد</p>
-                <p class="narrator-location">📍 الدير</p>
+
+                <h3 class="narrator-name">
+                    أ. عبدالله علي المطوع
+                </h3>
+
+                <p class="narrator-job">
+                    معلم لغة عربية متقاعد
+                </p>
+
+                <p class="narrator-location">
+                    📍 الدير
+                </p>
+
             </div>
 
-            <!-- 3. ناصر سعيد ناصر -->
+
+            <!-- الراوي الثالث -->
             <div class="card narrator-card">
+
                 <div class="narrator-avatar-box">
-                    <img src="naser.png" alt="ناصر سعيد ناصر" class="narrator-img">
+
+                    <img
+                        src="naser.png"
+                        alt="ناصر سعيد ناصر"
+                        class="narrator-img">
+
                 </div>
-                <h3 class="narrator-name">ناصر سعيد ناصر</h3>
-                <p class="narrator-job">بناء</p>
-                <p class="narrator-location">📍 سماهيج</p>
+
+                <h3 class="narrator-name">
+                    ناصر سعيد ناصر
+                </h3>
+
+                <p class="narrator-job">
+                    بناء
+                </p>
+
+                <p class="narrator-location">
+                    📍 سماهيج
+                </p>
+
             </div>
+
         </div>
+
     </section>
-<source src="story5.mp4" type="video/mp4">
-    
-    <!-- 6. قسم الختام والاستبيان (Feedback Section) -->
+
+
+    <!-- =========================================================
+         6. FEEDBACK
+         ========================================================= -->
+
     <section id="feedback" class="section-container feedback-section">
+
         <div class="feedback-card">
+
             <h2 class="feedback-quote">
                 «كُلُّ حِكايَةٍ تُروى تَترُكُ أثَرًا، وَكُلُّ رَأيٍ صادِقٍ يَصنَعُ أثَرًا آخَر»
             </h2>
+
             <p class="feedback-text">
-                شاركونا انطباعكم عن <strong>«رُواةُ الدار»</strong>، ولتكن كلمتكم جزءًا من حكايتنا.
+                شاركونا انطباعكم عن
+                <strong>«رُواةُ الدار»</strong>،
+                ولتكن كلمتكم جزءًا من حكايتنا.
             </p>
+
+
             <div class="qr-container">
-                <img src="qr-code.png" alt="رمز قياس الرضا QR Code" class="qr-image">
-                <p class="qr-hint">امسح الرمز عبر كاميرا هاتفك للمشاركة</p>
+
+                <img
+                    src="qr-code.png"
+                    alt="رمز قياس الرضا QR Code"
+                    class="qr-image">
+
+                <p class="qr-hint">
+                    امسح الرمز عبر كاميرا هاتفك للمشاركة
+                </p>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- 7. بطاقة توقيع المشروع -->
+
+    <!-- =========================================================
+         7. SIGNATURE
+         ========================================================= -->
+
     <div class="signature-card">
+
         <div class="signature-border">
-            <span class="decorative-star">✦</span>
+
+            <span class="decorative-star">
+                ✦
+            </span>
+
 
             <!-- جهد الطالبة والمدرسة -->
             <div class="credits-section">
-                <p class="section-label">تم إنجاز هذا المشروع بجهد الطالبة</p>
-                <h3 class="person-name">فاطمة علي حسن الديري</h3>
-                <p class="school-name">مدرسة الاستقلال الثانوية للبنات</p>
+
+                <p class="section-label">
+                    تم إنجاز هذا المشروع بجهد الطالبة
+                </p>
+
+                <h3 class="person-name">
+                    فاطمة علي حسن الديري
+                </h3>
+
+                <p class="school-name">
+                    مدرسة الاستقلال الثانوية للبنات
+                </p>
+
             </div>
 
+
             <div class="credits-divider"></div>
+
 
             <!-- فريق العمل -->
             <div class="credits-section team-section">
-                <p class="team-title">بمشاركة ودعم فريق العمل</p>
-                
+
+                <p class="team-title">
+                    بمشاركة ودعم فريق العمل
+                </p>
+
+
                 <div class="team-list">
-                    <div class="team-row">
-                        <span class="role-badge">الخط العربي</span>
-                        <span class="person-name">فاطمة فاضل علي العرادي</span>
-                    </div>
 
                     <div class="team-row">
-                        <span class="role-badge">التصوير والإنتاج</span>
-                        <span class="person-name">زهراء إبراهيم حسن القماري</span>
+
+                        <span class="role-badge">
+                            الخط العربي
+                        </span>
+
+                        <span class="person-name">
+                            فاطمة فاضل علي العرادي
+                        </span>
+
                     </div>
+
+
+                    <div class="team-row">
+
+                        <span class="role-badge">
+                            التصوير والإنتاج
+                        </span>
+
+                        <span class="person-name">
+                            زهراء إبراهيم حسن القماري
+                        </span>
+
+                    </div>
+
                 </div>
+
             </div>
+
 
             <div class="credits-divider"></div>
 
-            <!-- الإشراف والتوجيه (في النهاية) -->
+
+            <!-- الإشراف -->
             <div class="credits-section supervision-block">
-                <p class="section-label">إشراف وتوجيه</p>
-                <h3 class="person-name supervisor-highlight">أ. أمينة علي عبدالله النصوح</h3>
+
+                <p class="section-label">
+                    إشراف وتوجيه
+                </p>
+
+                <h3 class="person-name supervisor-highlight">
+                    أ. أمينة علي عبدالله النصوح
+                </h3>
+
             </div>
 
-            <span class="decorative-star">✦</span>
+
+            <span class="decorative-star">
+                ✦
+            </span>
+
         </div>
+
     </div>
 
-    <!-- 8. الفوتر السفلي الرئيسي -->
+
+    <!-- =========================================================
+         8. FOOTER
+         ========================================================= -->
+
     <footer class="main-footer">
+
         <div class="footer-content">
+
             <div class="social-links">
-                <a href="#">f</a>
-                <a href="#">yt</a>
-                <a href="#">ig</a>
-                <a href="#">tk</a>
+
+                <a href="#" aria-label="Facebook">f</a>
+
+                <a href="#" aria-label="YouTube">yt</a>
+
+                <a href="#" aria-label="Instagram">ig</a>
+
+                <a href="#" aria-label="TikTok">tk</a>
+
             </div>
-            <p class="footer-logo">رُواةُ الدَّار</p>
-            <p class="copyright">2026 مبادرة رواة الدار | البحرين</p>
+
+            <p class="footer-logo">
+                رُواةُ الدَّار
+            </p>
+
+            <p class="copyright">
+                2026 مبادرة رواة الدار | البحرين
+            </p>
+
         </div>
+
     </footer>
+
 
 </body>
 </html>
