@@ -1299,3 +1299,25 @@ header.site-header {
     }
 
 }
+
+
+/* إطار صور الرواة */
+.narrator-avatar-box {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #F8F4EC;
+    border-radius: 12px;
+}
+
+/* إظهار صورة الراوي كاملة دون قص */
+.narrator-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
