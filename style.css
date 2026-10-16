@@ -350,7 +350,7 @@ header.site-header {
 
 
 /* =========================================================
-   7. الرواة (Narrators Grid - تم الإصلاح والتنسيق)
+   7. الرواة (Narrators Grid - محدث لضبط عرض الوجوه بوضوح)
    ========================================================= */
 
 .narrators-grid {
@@ -379,8 +379,8 @@ header.site-header {
 
 /* الإطار الدائري لصور الرواة */
 .narrator-avatar-box {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 15px auto;
     border-radius: 50%;
     border: 3px solid var(--text-main);
@@ -389,9 +389,405 @@ header.site-header {
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* صورة الراوي مع إبراز الوجه */
+/* صورة الراوي مع التحكم الدقيق في إظهار الوجه بالكامل */
 .narrator-img {
     display: block;
-    width: 100
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%; /* يضمن تركيز الكاميرا/العرض على منطقة الوجه وسط الصورة */
+    border-radius: 50%;
+}
+
+.narrator-name {
+    font-family: 'Amiri', serif;
+    font-size: 1.4rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.narrator-role {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.narrator-location {
+    font-size: 0.85rem;
+    color: var(--accent-brown);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+/* =========================================================
+   8. FEEDBACK (QR Code)
+   ========================================================= */
+
+.feedback-card {
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(135deg, #FAF6F0 0%, #EFE8DC 100%);
+    border: 2px solid var(--accent-gold);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.feedback-quote {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    color: var(--accent-maroon);
+    margin-bottom: 15px;
+}
+
+.feedback-text {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* حاوية الكيو آر */
+.qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid var(--accent-gold);
+    text-align: center;
+}
+
+/* صورة الكيو آر */
+.qr-image {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.qr-hint {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   9. بطاقة التوقيع
+   ========================================================= */
+
+.signature-card {
+    width: calc(100% - 30px);
+    max-width: 600px;
+    margin: 60px auto 40px auto;
+    padding: 10px;
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.signature-border {
+    border: 2px dashed var(--accent-brown);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.decorative-star {
+    color: var(--accent-brown);
+}
+
+.section-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.person-name {
+    font-family: 'Amiri', serif;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    overflow-wrap: anywhere;
+}
+
+.school-name {
+    overflow-wrap: anywhere;
+}
+
+.supervisor-highlight {
+    color: var(--accent-maroon);
+}
+
+.credits-divider {
+    width: 70%;
+    height: 1px;
+    background-color: var(--accent-gold);
+    margin: 0 auto;
+}
+
+.team-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.team-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.role-badge {
+    font-size: 0.8rem;
+    background-color: #EEE7D8;
+    color: var(--accent-brown);
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+
+.main-footer {
+    background-color: #1F1915;
+    color: #C8BCAC;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #C8BCAC;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-logo {
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #8C7F72;
+}
+
+
+/* =========================================================
+   11. RESPONSIVE - الهواتف والشاشات المتوسطة (max-width: 768px)
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* ---------- HEADER ---------- */
+    header.site-header {
+        width: calc(100% - 24px);
+        margin: 12px auto 20px auto;
+        padding: 14px 12px;
+        position: relative;
+        top: 0;
+    }
+
+    .site-header .header-container {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .site-header .header-brand,
+    .site-header .header-logo,
+    .site-header .header-nav {
+        width: 100%;
+        flex: none;
+    }
+
+    .site-header .header-brand {
+        text-align: center;
+    }
+
+    .site-header .brand-name {
+        font-size: 1.9rem;
+    }
+
+    .site-header img.school-logo {
+        max-width: 90%;
+        max-height: 60px;
+    }
+
+    .site-header .header-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px 12px;
+    }
+
+    .site-header .header-nav a {
+        font-size: 0.82rem;
+        padding: 4px 2px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero-section {
+        padding: 20px 12px;
+    }
+
+    .hero-frame {
+        width: 100%;
+        padding: 20px 12px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .hero-cover-img,
+    .hero-door-img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        aspect-ratio: 220 / 350;
+    }
+
+    .hero-text-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .brand-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-quote {
+        font-size: 1.25rem;
+    }
+
+    .hero-subtext {
+        font-size: 0.95rem;
+    }
+
+    /* ---------- SECTIONS ---------- */
+    .section-container {
+        width: 100%;
+        margin: 50px auto;
+        padding: 0 14px;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-cards-container {
+        gap: 18px;
+    }
+
+    .about-card {
+        padding: 20px 18px;
+    }
+
+    .about-card-title {
+        font-size: 1.7rem;
+    }
+
+    /* ---------- GRIDS (Tales & Narrators) ---------- */
+    .cards-grid,
+    .narrators-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card,
+    .narrator-card {
+        width: 100%;
+        padding: 16px;
+    }
+
+    /* ---------- FEEDBACK & QR ---------- */
+    .feedback-card {
+        padding: 28px 15px;
+    }
+
+    .feedback-quote {
+        font-size: 1.45rem;
+    }
+
+    .qr-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    /* ---------- SIGNATURE ---------- */
+    .signature-card {
+        width: calc(100% - 24px);
+        margin: 40px auto 30px auto;
+    }
+
+    .signature-border {
+        padding: 20px 12px;
+    }
+
+    .person-name {
+        font-size: 1.3rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .main-footer {
+        padding: 30px 15px;
+    }
+}
+
+
+/* =========================================================
+   12. الهواتف الصغيرة جدًا (max-width: 400px)
+   ========================================================= */
+
+@media screen and (max-width: 400px) {
+    .site-header .brand-name {
+        font-size: 1.7rem;
+    }
+
+    .brand-title {
+        font-size: 2.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
