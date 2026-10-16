@@ -566,15 +566,14 @@ header.site-header {
     background-color: var(--bg-card);
     border: 2px solid var(--accent-gold);
     border-radius: 16px;
-    padding: 25px 20px;
+    padding: 30px 20px;
     text-align: center;
     width: 260px;
     min-width: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    gap: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -583,43 +582,39 @@ header.site-header {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-/* إطار الصورة */
+/* الإطار الدائري الأصلي */
 .narrator-avatar-box {
-    width: 190px;
-    height: 220px;
-    margin: 0 auto 12px;
-    padding: 5px;
-    border: 2px solid var(--accent-gold);
-    border-radius: 12px;
-    background-color: var(--bg-card);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    border: 3px solid var(--text-main);
+    padding: 3px;
     flex-shrink: 0;
+    overflow: hidden;
+    background-color: var(--bg-card);
 }
 
-/* إظهار الصورة كاملة دون قص أو تشويه */
+/* صور الرواة */
 .narrator-img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 7px;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 50%;
 }
 
 .narrator-name {
     font-family: 'Amiri', serif;
     font-size: 1.5rem;
-    margin-bottom: 2px;
-    line-height: 1.6;
+    margin-bottom: 5px;
 }
 
 .narrator-job {
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     min-height: 48px;
     display: flex;
     align-items: center;
@@ -635,20 +630,6 @@ header.site-header {
     border-radius: 15px;
     display: inline-block;
 }
-
-/* صور الرواة على الهواتف */
-@media screen and (max-width: 768px) {
-    .narrator-avatar-box {
-        width: 200px;
-        height: 230px;
-    }
-
-    .narrator-card {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
 
 
 /* =========================================================
@@ -1276,24 +1257,3 @@ header.site-header {
 
 }
 
-
-/* إطار صور الرواة */
-.narrator-avatar-box {
-    width: 100%;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #F8F4EC;
-    border-radius: 12px;
-}
-
-/* إظهار صورة الراوي كاملة دون قص */
-.narrator-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    display: block;
-}
